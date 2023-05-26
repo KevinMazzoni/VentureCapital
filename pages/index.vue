@@ -1,5 +1,5 @@
 <script>
-    alert('Displayed')
+    console.log('Prova log')
 </script>
 
 <template>
@@ -8,6 +8,9 @@
     </h1>
     <p class="paragraph">
         This is the descriptin of the page
+    </p>
+    <p>
+        Prova altro paragrafo
     </p>
 </template>
 
