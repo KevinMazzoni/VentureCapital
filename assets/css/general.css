@@ -1,0 +1,10 @@
+html,body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    margin: 0px;
+}
