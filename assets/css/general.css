@@ -5,6 +5,23 @@ html,body{
 body{
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    background-color: blue;
     margin: 0px;
+}
+
+.tile{
+
+}
+
+.description{
+
+}
+
+.link-to-all{
+
+}
+
+.button{
+
 }

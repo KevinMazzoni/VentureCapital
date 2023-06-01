@@ -1,11 +1,10 @@
-
 <template>
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-3">
                     <NuxtLink to="/">
-                        <img src="../assets/logo-no-background.png" class="image">
+                        <img src="../assets/GloriousKoalasLogoBW.png" class="image">
                     </NuxtLink>
                 </div>
                 <div class="col-9">
@@ -33,7 +32,7 @@
     }
     header {
         width: 100vw;
-        background-color: skyblue;
+        background-color: rgba(135, 207, 235, 0);
         height: 100px;
         margin-top: 0px;
         padding-top: 10px;
@@ -60,14 +59,14 @@
     }
 
     .landmark {
-        color: black;
+        /* color: black; */
+        color:white;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: 300;
         text-decoration: none;
 
         display: inline-block;
         position: relative;
-        color: #000000;
     }
 
     .landmark::after {
