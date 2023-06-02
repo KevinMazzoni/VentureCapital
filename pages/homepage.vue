@@ -14,14 +14,20 @@
 definePageMeta({
   layout: "homepage"
 })
+export default{
+    head(){
+        return{
+            title: "Glorious Koalas Inc."
+        }
+    }
+}
 </script>
 
 <style>
 
   .header{
     position: relative;
-    color: white;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+    /* text-shadow: 1px 1px 8px rgba(0,0,0,0.6); */
     z-index: 10000;
   }
   .video-container {
