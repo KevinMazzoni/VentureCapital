@@ -1,44 +1,46 @@
 <template>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <NuxtLink to="/">
-                        <img src="../assets/GloriousKoalasLogoBW.png" class="image">
-                    </NuxtLink>
-                </div>
-                <div class="col-9">
-                    <nav class="nav">
-                        <NuxtLink to="/" class="landmark">Home</NuxtLink>
-                        <NuxtLink to="/allProjects" class="landmark">All Projects</NuxtLink>
-                        <NuxtLink to="/allAreas" class="landmark">All Areas</NuxtLink>
-                        <NuxtLink to="/contacts" class="landmark">Contacts</NuxtLink>
-                    </nav>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <nav class="nav">
+                    <NuxtLink to="/" class="landmark">Home</NuxtLink>
+                    <NuxtLink to="/allProjects" class="landmark">All Projects</NuxtLink>
+                    <NuxtLink to="/allAreas" class="landmark">All Areas</NuxtLink>
+                    <NuxtLink to="/contacts" class="landmark">Contacts</NuxtLink>
+                </nav>
             </div>
         </div>
-    </header>
+        <div class="row logo">
+            <div class="col-12">
+                <NuxtLink to="/">
+                    <img src="../assets/GloriousKoalasLogoBW.png" class="image">
+                </NuxtLink>
+            </div>
+        </div>
+    </div>
 </template>
 
 <style scoped>
 
+    .col-12{
+        margin-top: 20%;
+    }
+
     .image{
         width: 100%;
         height: 100%;
-        padding-left: 30px;
-        padding-top: 4px;
     }
     .logo{
         margin-top: 0px;
     }
-    header {
+    /* header {
         width: 100vw;
         background-color: rgba(135, 207, 235, 0);
         height: 100px;
         margin-top: 0px;
         padding-top: 10px;
         padding-bottom: 10px;
-    }
+    } */
 
     nav {
         float: right;
@@ -49,14 +51,6 @@
         vertical-align: middle;
         padding-top: 35px;
         padding-right: 30px;
-    }
-    .col-3{
-        float: left;
-        width: 30%;
-    }
-    .col-9{
-        width: 70%;
-        float: right;
     }
 
     .landmark {

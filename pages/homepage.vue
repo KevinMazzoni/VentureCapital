@@ -14,13 +14,6 @@
 definePageMeta({
   layout: "homepage"
 })
-export default{
-    head(){
-        return{
-            title: "Glorious Koalas Inc."
-        }
-    }
-}
 </script>
 
 <style>
@@ -38,6 +31,7 @@ export default{
       height: 100%; 
       overflow: hidden;
       z-index: 950;
+      background-color: darkblue;
   }
   .video-container video {
       /* Make video to at least 100% wide and tall */
