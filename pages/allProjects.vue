@@ -1,23 +1,18 @@
 <template>
-    <div>
-        Project1
-        Project2
-    </div>
-    <div>
-        {{ message }}
-    </div>
+    <ProjectCard :name="'IntelliHire'"
+    :url="'/_nuxt/assets/projects/IntelliHire.jpg'"
+    :caption="'IntelliHire revolutionizes the interview process of a company, by using AI to perform a CV screening and the first step of the interview.'"/>
 </template>
 
 <script>
-    export default defineNuxtComponent({
-        async asyncData(){
-            let message = await $fetch('/api/7')
-            return { message }
-        },
-        data(){
-            return{
-                num: 20
-            }
+    import ProjectCard from '../components/cards/ProjectCard.vue';
+
+    export default {
+        components: {
+            ProjectCard
         }
-    })
+    }
 </script>
+
+<style>
+</style>
