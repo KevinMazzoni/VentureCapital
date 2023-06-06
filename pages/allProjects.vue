@@ -1,13 +1,10 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <ProjectCard :name="'IntelliHire'" :url="'/_nuxt/assets/projects/IntelliHire.jpg'"
-                :caption="'IntelliHire revolutionizes the interview process of a company, by using AI to perform a CV screening and the first step of the interview.'" />
-            </div>
-            <div class="col-6">
-                <ProjectCard :name="'GreenMe'" :url="'/_nuxt/assets/projects/GreenEnergy.jpeg'"
-                :caption="'GreenMe aims at generating green energy from multiple renewable sources. It has been awarded as one of the most disruptive company in the sector.'"/>
+            <div v-for="card of cards" class="col-8">
+                <NuxtLink to="/project/${card.name}`">
+                    <ProjectCard :name="card.name" :url="card.url" :caption="card.caption"/>
+                </NuxtLink>
             </div>
         </div>
     </div>
@@ -31,6 +28,22 @@ export default {
     components: {
         ProjectCard_try,
         ProjectCard
+    }, 
+    data() {
+        return {
+            cards: [
+                {
+                    name: 'IntelliHire',
+                    url:'/_nuxt/assets/projects/IntelliHire.jpg', 
+                    caption: 'IntelliHire revolutionizes the interview process of a company, by using AI to perform a CV screening and the first step of the interview.'
+                }, 
+                {
+                    name: 'GreenMe',
+                    url:'/_nuxt/assets/projects/GreenEnergy.jpeg', 
+                    caption: 'GreenMe aims at generating green energy from multiple renewable sources. It has been awarded as one of the most disruptive company in the sector.'
+                }
+            ]
+        }
     }
 }
 </script>
