@@ -2,10 +2,10 @@
 <template>
     <header>
         <div class="container">
-            <div class="row">
+            <div class="row headerrow">
                 <div class="col-3">
                     <NuxtLink to="/">
-                        <img src="../assets/logo-no-background.png" class="image">
+                        <img src="../assets/GloriousKoalasLogoBW.png" class="image">
                     </NuxtLink>
                 </div>
                 <div class="col-9">
@@ -21,7 +21,11 @@
     </header>
 </template>
 
-<style>
+<style scoped>
+
+    .headerrow{
+        margin-top: 7px;
+    }
     .image{
         width: 100%;
         height: 100%;
@@ -33,7 +37,7 @@
     }
     header {
         width: 100vw;
-        background-color: skyblue;
+        background-color: darkblue;
         height: 100px;
         margin-top: 0px;
         padding-top: 10px;
@@ -47,7 +51,7 @@
         font-size: 17pt;
         font-weight: bold;
         vertical-align: middle;
-        padding-top: 35px;
+        padding-top: 16px;
         padding-right: 30px;
     }
     .col-3{
@@ -60,14 +64,13 @@
     }
 
     .landmark {
-        color: black;
+        color: white;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: 300;
         text-decoration: none;
 
         display: inline-block;
         position: relative;
-        color: #000000;
     }
 
     .landmark::after {

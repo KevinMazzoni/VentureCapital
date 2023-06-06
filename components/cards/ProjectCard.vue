@@ -42,6 +42,12 @@
         text-align: center;
         margin-top: 40px;
         margin-bottom: 40px;
+
+        transition: box-shadow .3s;
+    }
+    .outer-container:hover{
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+        cursor: pointer;
     }
 
     .inner-container{

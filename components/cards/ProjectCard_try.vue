@@ -13,7 +13,11 @@
                         <h1 class="see-project">See project</h1>
                     </div>
                 </div>
-            <!-- </div> -->
+            <!-- </div>
+        </div>
+    </div> -->
+
+            
             <!-- <div class="col-3">
                 {{ caption }}
             </div> -->
@@ -55,6 +59,7 @@ body {
 }
 
 .wrapper {
+    margin-top: 30px;
     
     position: relative;
     height: 50%;
@@ -71,7 +76,7 @@ body {
     cursor: pointer;
 }
 .wrapper:hover{
-    background-color: rgba(60, 60, 60, 0.161);
+    background-color: rgba(60, 60, 60, 0.027);
     box-shadow: 0 10px 20px  rgb(60, 60, 60);
     border: none;
     transition: box-shadow 0.3s ease-in-out;

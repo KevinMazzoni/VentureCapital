@@ -1,13 +1,24 @@
 <template>
     <footer>
-        <NuxtLink to="/contacts">contact us</NuxtLink>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <NuxtLink to="/contacts" class="link">contact us</NuxtLink>
+                </div>
+            </div>
+        </div>
     </footer>
 </template>
 
-<style>
+<style scoped>
     footer {
-        width: 100vw;
-        background-color:rgb(88, 166, 186);
-        height: 20px
+        width: 100%;
+        background-color: darkblue;
+        height: 10vh
     }
+
+    .link{
+        color: white;
+    }
+
 </style>
