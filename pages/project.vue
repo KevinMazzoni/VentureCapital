@@ -3,14 +3,23 @@
     <div class="container">
         <div class="row">
             <div class="col-6 description">
-                Poliigon provides high quality 3D assets that support the world’s leading 3D artists.
-                Through cutting-edge 3D creation processes, we deliver photoreal, ultra-high-quality    
-                textures, models, brushes and HDRIs for archviz, product rendering, game design, vfx and animation.
+               {{ projectEco  }}
             </div>
         </div>
     </div>
 </template>
-
+<script lang="ts">
+  export default {
+    computed: {
+      projectName() {
+        return this.$route.query.name || 'Valore predefinito se il parametro name non è presente';
+      },
+      projectEco() {
+        return this.$route.query.eco || 'Valore predefinito se il parametro name non è presente';
+      }
+    }
+  };
+</script>
 <style scoped>
     img{
         width: 100%;
