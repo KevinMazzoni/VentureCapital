@@ -42,6 +42,7 @@
         margin-top: 0px;
         padding-top: 10px;
         padding-bottom: 10px;
+        position: fixed;
     }
 
     nav {

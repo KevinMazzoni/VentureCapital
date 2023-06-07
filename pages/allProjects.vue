@@ -4,7 +4,7 @@
             <div v-for="card of cards" class="col-8">               
                 <NuxtLink :to="{
                   path: '/project',
-                  query: { name: card.name, eco: card.eco }
+                  query: { name: card.name, eco: card.eco, url:card.url}
                 }">
                     <ProjectCard :name="card.name" :url="card.url" :caption="card.caption"/>
                 </NuxtLink>
