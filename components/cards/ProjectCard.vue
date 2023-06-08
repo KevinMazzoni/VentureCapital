@@ -50,6 +50,10 @@
         cursor: pointer;
     }
 
+    .outer-container:hover img{
+        transform: scale(1.2);
+    }
+
     .inner-container{
         
         border: none;
@@ -61,11 +65,13 @@
         text-align: center;
         color: white;
         padding: 0px;
+        transition: all 200ms ease-in-out;
     }
     img, svg{
         width: 100%;
         border-radius: 10px;
         filter: brightness(60%);
+        transition: all 200ms ease-in-out;
     }
     
     .title{

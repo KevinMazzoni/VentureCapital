@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-9">
+        <div class="row landmarksrow">
+            <div class="col-12">
                 <nav class="nav">
                     <NuxtLink to="/" class="landmark">Home</NuxtLink>
                     <NuxtLink to="/allProjects" class="landmark">All Projects</NuxtLink>
@@ -10,7 +10,7 @@
                 </nav>
             </div>
         </div>
-        <div class="row logo">
+        <div class="row logorow">
             <div class="col-12">
                 <NuxtLink to="/">
                     <img src="../assets/GloriousKoalasLogoBW.png" class="image">
@@ -22,45 +22,43 @@
 
 <style scoped>
 
+    .container{
+        position: absolute;
+        height: 100%;
+        z-index: 10000;
+    }
+
+    .landmarksrow{
+        position: absolute;
+        width: 100%;
+        margin-top: 4%;
+    }
+    .logorow{
+        
+        align-items: center;
+        display: flex;
+        min-height: 100%;
+    }
     .col-12{
-        margin-top: 20%;
+        display: flex;
+        justify-content: center;
     }
 
     .image{
         width: 100%;
         height: 100%;
     }
-    .logo{
-        margin-top: 0px;
-    }
-    /* header {
-        width: 100vw;
-        background-color: rgba(135, 207, 235, 0);
-        height: 100px;
-        margin-top: 0px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    } */
 
     nav {
-        float: right;
-        display: flex;
-        gap: 30px;
-        font-size: 17pt;
-        font-weight: bold;
-        vertical-align: middle;
-        padding-top: 35px;
-        padding-right: 30px;
+        gap: 10vh;
     }
 
     .landmark {
-        /* color: black; */
         color:white;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-weight: 300;
+        font-weight: 330;
+        font-size: 3vh;
         text-decoration: none;
-
-        display: inline-block;
         position: relative;
     }
 

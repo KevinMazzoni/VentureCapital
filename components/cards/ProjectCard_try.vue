@@ -71,7 +71,7 @@ body {
     display: flex;
     flex-direction: row;
 
-    transition: all 200ms ease-in-out;
+    /* transition: all 200ms ease-in-out; */
 
     cursor: pointer;
 }
@@ -79,14 +79,14 @@ body {
     background-color: rgba(60, 60, 60, 0.027);
     box-shadow: 0 10px 20px  rgb(60, 60, 60);
     border: none;
-    transition: box-shadow 0.3s ease-in-out;
+    /* transition: box-shadow 0.3s ease-in-out; */
 }
 
 .image-wrapper {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
 
     transition: all 200ms ease-in-out;
