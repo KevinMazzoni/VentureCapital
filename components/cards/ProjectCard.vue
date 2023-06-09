@@ -43,7 +43,17 @@
         margin-top: 40px;
         margin-bottom: 40px;
 
+        display: inline-block;
+        margin: 20px;
+        border: 1px solid black;
+        overflow: hidden; 
+
         transition: box-shadow .3s;
+    }
+
+    .outer-container img{
+        display: block;
+        transition: transform .4s;
     }
     .outer-container:hover{
         box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -51,7 +61,10 @@
     }
 
     .outer-container:hover img{
-        transform: scale(1.2);
+        /* transform: scale(1.2); */
+
+        transform: scale(1.3);
+        transform-origin: 50% 50%;
     }
 
     .inner-container{
