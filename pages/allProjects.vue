@@ -59,17 +59,8 @@ export default {
 </script>
 
 <style scoped>
-    .row{
-        height: auto;
-    }
     .link{
         text-decoration: none;
         color: black;
-    }
-    .col-6{
-        min-width: 660px;
-        max-width: 660px;
-        min-height: 294px;
-        max-height: 294px;
     }
 </style>

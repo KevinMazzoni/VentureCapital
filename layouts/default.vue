@@ -9,6 +9,6 @@
 <style scoped>
     .slot{
         /* padding-top: 5.28%; */
-        padding-top: 8%;
+        padding-top: 10%;
     }
 </style>

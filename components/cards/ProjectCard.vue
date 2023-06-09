@@ -2,7 +2,7 @@
     <div class="container outer-container">
         <div class="row">
             <div class="col-8">
-                <div class="container inner-container">
+                <div class="container">
                     <div class="row">
                         <div class="col-12 fill">
                             <img :src="url" class="background-image">
@@ -28,30 +28,21 @@
 
 <style scoped>
     .col-8{
-        border: none;
         border-radius: 10px;
         padding: 0px;
-        /* background-image: url('~/assets/projects/IntelliHire.jpg');
-        min-width: fit-content;
-        min-height: fit-content; */
-        display: inline-block;
-        /* margin: 20px; */
-        /* border: 1px solid black; */
-        overflow: hidden; 
+        overflow: hidden;
     }
 
     .outer-container{
         border-style: groove;
-        border-radius: 10px;
-        text-align: center;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        border-radius: 12px;
+        text-align: justify;
+        margin-bottom: 12%;
 
         transition: box-shadow .3s;
     }
 
     .col-8 img{
-        display: block;
         transition: transform .4s;
     }
     .outer-container:hover{
@@ -60,21 +51,11 @@
     }
 
     .outer-container:hover img{
-        /* transform: scale(1.2); */
-
         transform: scale(1.3);
         transform-origin: 50% 50%;
     }
-
-    .inner-container{
-        
-        border: none;
-        border-radius: 10px;
-    }
-
     .fill {
         position: relative;
-        text-align: center;
         color: white;
         padding: 0px;
         transition: all 200ms ease-in-out;
@@ -85,11 +66,8 @@
         filter: brightness(60%);
         transition: all 200ms ease-in-out;
 
-        display: block;
-        max-width:422px;
         max-height:211px;
         width: 100%;
-        height: auto;
     }
     
     .title{
