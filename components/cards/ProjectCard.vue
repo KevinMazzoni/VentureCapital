@@ -34,6 +34,10 @@
         /* background-image: url('~/assets/projects/IntelliHire.jpg');
         min-width: fit-content;
         min-height: fit-content; */
+        display: inline-block;
+        /* margin: 20px; */
+        /* border: 1px solid black; */
+        overflow: hidden; 
     }
 
     .outer-container{
@@ -43,15 +47,10 @@
         margin-top: 40px;
         margin-bottom: 40px;
 
-        display: inline-block;
-        margin: 20px;
-        border: 1px solid black;
-        overflow: hidden; 
-
         transition: box-shadow .3s;
     }
 
-    .outer-container img{
+    .col-8 img{
         display: block;
         transition: transform .4s;
     }
