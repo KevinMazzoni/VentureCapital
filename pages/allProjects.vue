@@ -44,13 +44,13 @@ export default {
                     eco: 'This is the eco and social prec',
                     name: 'AiMed',
                     url:'/_nuxt/assets/projects/Healthcare_3.jpeg', 
-                    caption: 'AiMed aims at revoluzionizing the healthcare sector, putting in contact patients that suffers from a disease with a specialised doctor.'
+                    caption: 'AiMed aims at revolutionze the healthcare sector, putting in contact patients that suffers from a disease with a specialised doctor.'
                 },
                 {
                     eco: 'This is the eco and social prec',
-                    name: 'IntelliHire',
-                    url:'/_nuxt/assets/projects/IntelliHire.jpg', 
-                    caption: 'IntelliHire revolutionizes the interview process of a company, by using AI to perform a CV screening and the first step of the interview.'
+                    name: 'Edu4You',
+                    url:'/_nuxt/assets/projects/Education.jpeg', 
+                    caption: '"Unlocking Knowledge, Empowering Minds - Transforming Education, One Student at a Time!" This is the motto of Edu4You.'
                 }
             ]
         }
