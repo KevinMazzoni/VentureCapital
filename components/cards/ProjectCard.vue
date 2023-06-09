@@ -66,12 +66,18 @@
         color: white;
         padding: 0px;
         transition: all 200ms ease-in-out;
+        z-index: -1;
     }
-    img, svg{
-        width: 100%;
+    img{
         border-radius: 10px;
         filter: brightness(60%);
         transition: all 200ms ease-in-out;
+
+        display: block;
+        max-width:422px;
+        max-height:211px;
+        width: 100%;
+        height: auto;
     }
     
     .title{
