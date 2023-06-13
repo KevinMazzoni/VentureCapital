@@ -4,7 +4,7 @@ const nuxtConfig: NuxtConfig = {
     // Altre configurazioni...
     
     head: {
-        title: 'Glorious Koalas Inc.'
+        titleTemplate: '%s - Nome del Tuo Progetto',
     },
 
     css: [

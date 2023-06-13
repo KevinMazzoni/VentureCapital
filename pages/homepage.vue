@@ -11,9 +11,17 @@
 </template>
 
 <script>
-  definePageMeta({
-    layout: "homepage"
-  })
+  export default {
+  head() {
+    return {
+      title: 'Il mio titolo di pagina'
+    };
+  },
+  // ...il resto del componente della pagina
+}
+  // definePageMeta({
+  //   layout: "homepage"
+  // })
 </script>
 
 <style scoped>
