@@ -3,7 +3,7 @@
     <HomepageHeader />
   </div>
   <div class="video-container">
-    <video playsinline autoplay muted loop poster="~/assets/GloriousKoalasLogoBW.png">
+    <video playsinline autoplay muted loop poster="~/assets/background-image.jpg">
       <source src="~/assets/NewYork.mp4" type="video/mp4" />
         Your browser does not support the video tag.
     </video>

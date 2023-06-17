@@ -7,9 +7,6 @@
                     {{ name }}
                 </div>
             </div>
-            <!-- <div class="col-4">
-                {{ caption }}
-            </div> -->
         </div>
     </div>
 </template>
@@ -62,7 +59,7 @@
         filter: brightness(60%);
         transition: all 200ms ease-in-out;
 
-        max-height:211px;
+        max-height:205px;
         width: 100%;
     }
     
