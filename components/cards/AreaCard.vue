@@ -1,14 +1,10 @@
 <template>
     <div class="container outer-container">
         <div class="row">
-            <div class="col-12 cont">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 fill">
-                            <img :src="url" class="background-image">
-                            <div class="title">{{ name }}</div>
-                        </div>
-                    </div>
+            <div class="col-12 cont fill">
+                <img :src="url" class="background-image">
+                <div class="title">
+                    {{ name }}
                 </div>
             </div>
             <!-- <div class="col-4">
