@@ -1,5 +1,6 @@
 import { NuxtConfig } from '@nuxt/types';
 
+
 const nuxtConfig: NuxtConfig = {
     // Altre configurazioni...
     
@@ -8,7 +9,8 @@ const nuxtConfig: NuxtConfig = {
     },
 
     css: [
-      'bootstrap/dist/css/bootstrap.css'
+      'bootstrap/dist/css/bootstrap.css',
+      '~/assets/css/general.css'
     ]
 
   };

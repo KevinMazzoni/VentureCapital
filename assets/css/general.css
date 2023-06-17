@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "NewStyle";
+    src: local("NewStyle"),
+         url(~/assets/fonts/NewStyle.otf) format("truetype");
+}
+@font-face {
+    font-family: "TT-Travels";
+    src: local("TT-Travels"),
+         url(~/assets/fonts/TT-Travels.otf) format("truetype");
+}
+
 html,body{
     /* height: 100%; */
 }
@@ -11,7 +22,15 @@ body{
 }
 
 
+.title{
+    font-size: xx-large;
+    font-family: 'NewStyle', sans-serif;
+}
 
+.caption{
+    font-size: large;
+    font-family: 'TT-Travels', sans-serif;
+}
 
 
 .link-to-all{
