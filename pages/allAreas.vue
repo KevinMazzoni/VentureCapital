@@ -57,7 +57,7 @@ export default {
                 {
                     eco: 'This is the eco and social prec',
                     name: 'Education',
-                    url:'/_nuxt/assets/areas/Educationn.jpeg', 
+                    url:'/_nuxt/assets/areas/Edu.jpeg', 
                     caption: '"Unlocking Knowledge, Empowering Minds - Transforming Education, One Student at a Time!" This is the motto of Edu4You.'
                 }
             ]

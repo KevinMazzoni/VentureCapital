@@ -2,8 +2,26 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <NuxtLink to="/contacts" class="link">contact us</NuxtLink>
+                <div class="col-4">
+                    <NuxtLink to="/contacts" class="link">Contact us</NuxtLink>
+                </div>
+                <div class="col-4">
+                    <div class="container">
+                        <!-- <div class="row">
+                            <div class="col-12">
+                                This site was realized by Glorious Koalas Inc.
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- @All rights reserved -->
+                                <img src="~/assets/copyright.png" class="copyright-image"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    Menu
                 </div>
             </div>
         </div>
@@ -17,8 +35,30 @@
         height: 10vh
     }
 
-    .link{
+    .container{
+        height: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: x-large;
+        font-weight: 100;
+    }
+
+    .row{
+        height: 100%;
         color: white;
+    }
+
+    .col-4{
+        margin: auto;
+        text-align: center;
+    }
+
+    .link{
+        text-decoration: none;
+        color: white;
+    }
+
+    .copyright-image{
+        height: 70px
     }
 
 </style>
