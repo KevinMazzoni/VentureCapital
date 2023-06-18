@@ -80,5 +80,6 @@ export default {
     }
     .areas{
         margin-top: 3%;
+        justify-content: center;
     }
 </style>

@@ -1,6 +1,16 @@
 <template>
     <div class="container">
         <div class="row">
+            <div class="col-12 title">
+                Projects we're investing in
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 caption">
+                Below you can find a list of all the projects we're funding. The list is constantly updated, the next project can be yours!
+            </div>
+        </div>
+        <div class="row cardsrow">
             <div v-for="card of cards" class="col-6">               
                 <NuxtLink :to="{
                   path: '/project',
@@ -65,5 +75,12 @@ export default {
     }
     .container{
         margin-top: 4%;
+    }
+    .col-12{
+        text-align: center;
+    }
+    .cardsrow{
+        margin-top: 4%;
+        justify-content: center;
     }
 </style>
