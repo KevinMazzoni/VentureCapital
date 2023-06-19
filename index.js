@@ -6,8 +6,8 @@ import path from "path"
 
 import dataInitialization from './DBdata.js'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+// const __filename = fileURLToPath(import.meta.url)
+const __dirname = "./" /*path.dirname(__filename)*/
 
 const app = express()
 app.use(express.json())
@@ -18,24 +18,26 @@ const db = new Sequelize({
 })
 
 async function initDB() {
+    const models = {}
+
     await db.authenticate()
 
-    const Dog = db.define('dog', {
+    models.Project = db.define('project', {
         name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        age: {
-            type: DataTypes.NUMBER,
+        url: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        caption: {
+            type: DataTypes.STRING,
             allowNull: false
         }
     })
 
     await db.sync({ force: true })
-
-    const models = {
-        Dog
-    }
 
     await dataInitialization(models)
 
@@ -45,13 +47,13 @@ async function initDB() {
 async function initServer() {
     const models = await initDB()
 
-    app.get('/dogs', async (req, res) => {
-        const data = await models.Dog.findAll()
+    app.get('/allProjects', async (req, res) => {
+        const data = await models.Project.findAll()
 
         res.status(200).json(data)
     })
 
-    app.use(express.static(path.join(__dirname, "client")))
+    app.use(express.static(path.join(__dirname, "pages")))
     app.listen(3000, () => {
        console.log("Listening on port 3000")
     })
@@ -59,4 +61,4 @@ async function initServer() {
 
 initServer();
 
-//20 minuti
+// export default fromNodeMiddleware(app)
