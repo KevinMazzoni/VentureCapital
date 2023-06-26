@@ -47,7 +47,7 @@ async function initDB() {
 async function initServer() {
     const models = await initDB()
 
-    app.get('/allProjects', async (req, res) => {
+    app.get('/projectsDB', async (req, res) => {
         const data = await models.Project.findAll()
 
         res.status(200).json(data)

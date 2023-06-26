@@ -6,5 +6,5 @@ export default defineEventHandler((event) => {
     for(let data in query){
         str += data + " - " + query[data] + ','
     }
-    return "You sent me this query: " + str
+    return "You sent me this query, in the /api/folder folder: " + str
 })

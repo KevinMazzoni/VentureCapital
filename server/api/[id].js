@@ -1,4 +1,5 @@
-export default defineEventHandler((event) => {
+export default defineEventHandler( (event) => {
     const id = event.context.params.id
-    return "You sent me these paramenters: " + id
+    
+    return "You sent me this parameters " + id
 })
