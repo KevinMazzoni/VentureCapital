@@ -1,10 +1,17 @@
-export default defineEventHandler((event) => {
-    const query = getQuery(event)
+import { serverSupabaseClient } from "#supabase/server"
 
-    let str = ""
+export default defineEventHandler(async (event) => {
+    const id = event.context.params.id
 
-    for(let data in query){
-        str += data + " - " + query[data] + ','
+    const client = serverSupabaseClient(event)
+
+    const { data, error } = await client.from('projects').select("*").limit(1).single()
+
+    if(error){
+        throw createError({statusCode: 400, statusMessage: error.message})
     }
-    return "You sent me this query, in the /api/folder folder: " + str
+
+    console.log(data)
+
+    return data
 })
