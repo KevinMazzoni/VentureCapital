@@ -13,6 +13,10 @@ const nuxtConfig: NuxtConfig = {
       '~/assets/css/general.css'
     ],
 
+    modules: [
+      '@nuxtjs/supabase'
+    ]
+
     // ssr: true,
 
     // serverHandlers: [
