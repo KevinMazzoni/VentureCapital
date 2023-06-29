@@ -1,5 +1,6 @@
 {
   "name": "nuxt-app",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -9,7 +10,22 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/types": "^2.17.0",
     "@types/node": "^18",
     "nuxt": "^3.5.1"
-  }
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "axios": "^1.4.0",
+    "bootstrap": "5.3",
+    "express": "^4.18.2",
+    "sequelize": "^6.32.1",
+    "sqlite3": "^5.1.6"
+  },
+  "description": "Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
