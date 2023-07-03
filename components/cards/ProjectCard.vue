@@ -1,18 +1,11 @@
 <template>
     <div class="container outer-container">
         <div class="row">
-            <div class="col-8">
-                <div class="container inner-container">
-                    <div class="row">
-                        <div class="col-12 fill">
-                            <img :src="url" class="background-image">
-                            <div class="title">{{ name }}</div>
-                        </div>
-                    </div>
+            <div class="col-12 cont fill">
+                <img :src="url" class="background-image">
+                <div class="title">
+                    {{ name }}
                 </div>
-            </div>
-            <div class="col-4">
-                {{ caption }}
             </div>
         </div>
     </div>
@@ -35,7 +28,15 @@
         min-width: fit-content;
         min-height: fit-content; */
     }
-
+    .cont{
+        border-radius: 10px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    
+    .cont img{
+        transition: transform .4s;
+    }
     .outer-container{
         border-style: groove;
         border-radius: 10px;
@@ -50,6 +51,10 @@
         cursor: pointer;
     }
 
+    .outer-container:hover img{
+        transform: scale(1.3);
+        transform-origin: 50% 50%;
+    }
     .inner-container{
         
         border: none;
@@ -61,11 +66,15 @@
         text-align: center;
         color: white;
         padding: 0px;
+        transition: all 200ms ease-in-out;
+
     }
-    img, svg{
+    img {
         width: 100%;
         border-radius: 10px;
         filter: brightness(60%);
+        transition: all 200ms ease-in-out;
+
     }
     
     .title{
