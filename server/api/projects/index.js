@@ -5,13 +5,12 @@ export default defineEventHandler(async (event) => {
 
     const client = serverSupabaseClient(event)
 
-    const { data, error } = await client.from('projects').select("*").limit(1).single()
+    const { data, error } = await client.from('projects').select("id, name, url, caption, text")//.limit(1).single()
 
     if(error){
         throw createError({statusCode: 400, statusMessage: error.message})
     }
 
-    console.log(data)
 
     return data
 })
