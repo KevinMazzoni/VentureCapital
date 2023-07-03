@@ -13,10 +13,9 @@
         </div>
         <div class="row cardsrow">
             <div v-for="card of projects" class="col-6">
-                <!-- {{ card.name }} {{ card.url }} {{ card.caption }} -->
                 <NuxtLink :to="{
                   path: '/project',
-                  query: { name: card.name, /*eco: card.eco,*/ url:card.url}
+                  query: { name: card.name, url:card.url}
                 }"
                 class="link"
                 >
@@ -33,8 +32,9 @@
     let projects = [];
 
     const data = await useFetch('/api/projects')
-
+    let url 
     for(let project of data.data.value){
+        url = project.url
         projects.push(project)
     }
 </script>
