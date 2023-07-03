@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-    import ProjectCard from 'components/cards/ProjectCard.vue';
+    import ProjectCard from '~/components/cards/ProjectCard.vue'
 
     let projects = [];
 
