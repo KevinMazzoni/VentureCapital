@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-12 title">
                 Projects we're investing in
+                <img src="../assets/projects/IntelliHire.jpg" class="image">
             </div>
         </div>
         <div class="row">
