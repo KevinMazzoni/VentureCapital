@@ -2,7 +2,7 @@
     <img :src="projectUrl">
     <div class="container">
         <div class="row">
-            <div class="col-6 title">
+            <div class="col-6 title projectTitle">
                {{ projectName  }}
             </div>
             <div class="description">
@@ -33,11 +33,16 @@
         object-fit: cover;
     }
     .description{
-        font-size: 40px;
-        font-family: century-gothic, sans-serif;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 3%;
     }
 
     .container{
         margin-bottom: 5%;
+    }
+
+    .projectTitle{
+      margin-top: 5%;
     }
 </style>
