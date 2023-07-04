@@ -32,9 +32,7 @@
     let projects = [];
 
     const data = await useFetch('/api/projects')
-    let url 
     for(let project of data.data.value){
-        url = project.url
         projects.push(project)
     }
 </script>
