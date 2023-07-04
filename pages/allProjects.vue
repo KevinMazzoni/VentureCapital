@@ -12,15 +12,15 @@
             </div>
         </div>
         <div class="row cardsrow">
-            <div v-for="card of projects" class="col-6">
+            <div v-for="project of projects" class="col-6">
                 <!-- {{ card.name }} {{ card.url }} {{ card.caption }} -->
                 <NuxtLink :to="{
                   path: '/project',
-                  query: { name: card.name, /*eco: card.eco,*/ url:card.url}
+                  query: { name: project.name, text: project.text, url:project.url}
                 }"
                 class="link"
                 >
-                    <ProjectCard :name="card.name" :url="card.url" :caption="card.caption"/>
+                    <ProjectCard :name="project.name" :url="project.url" :caption="project.caption"/>
                 </NuxtLink>
             </div>
         </div>

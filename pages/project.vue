@@ -2,30 +2,11 @@
     <img :src="projectUrl">
     <div class="container">
         <div class="row">
-            <div class="col-6 description">
-               {{ projectEco  }}
+            <div class="col-6 title">
+               {{ projectName  }}
             </div>
-            <div> scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollsc
-                rollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscr
-                ollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrol
-                lscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscro
-                llscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrolls
-                crollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll
+            <div class="description">
+              {{ projectText }}
             </div>
         </div>
     </div>
@@ -36,8 +17,8 @@
       projectName() {
         return this.$route.query.name || 'Valore predefinito se il parametro name non è presente';
       },
-      projectEco() {
-        return this.$route.query.eco || 'Valore predefinito se il parametro name non è presente';
+      projectText() {
+        return this.$route.query.text || 'Valore predefinito se il parametro name non è presente';
       },
       projectUrl() {
         return this.$route.query.url || 'Valore predefinito se il parametro name non è presente';
@@ -51,12 +32,6 @@
         height: 600px;
         object-fit: cover;
     }
-
-    .title{
-        font-size: 40px;
-        font-family: emoji;
-    }
-
     .description{
         font-size: 40px;
         font-family: century-gothic, sans-serif;
