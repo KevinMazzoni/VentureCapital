@@ -2,13 +2,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12 title">
-                Projects we're investing in!!
+                Projects we're investing in,
             </div>
         </div>
         <div class="row">
             <div class="col-12 caption">
                 <button @click="refresh">Refresh</button>
-                <img src="../assets/projects/IntelliHire.jpg" class="image">
                 Below you can find a list of all the projects we're funding. The list is constantly updated, the next project can be yours!
             </div>
         </div>
