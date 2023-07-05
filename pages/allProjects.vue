@@ -1,6 +1,57 @@
 <template>
-    <div>
-        Project1
-        Project2
+    <div class="container">
+        <div class="row">
+            <div class="col-12 title">
+                Projects we're investing in
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 caption">
+                <button @click="refresh">Refresh</button>
+                Below you can find a list of all the projects we're funding. The list is constantly updated, the next project can be yours!
+            </div>
+        </div>
+        <div class="row cardsrow">
+            <div v-for="project of projects" class="col-6">
+                <!-- {{ card.name }} {{ card.url }} {{ card.caption }} -->
+                <NuxtLink :to="{
+                  path: '/project',
+                  query: { name: project.name, text: project.text, url:project.url}
+                }"
+                class="link"
+                >
+                    <ProjectCard :name="project.name" :url="project.url" :caption="project.caption"/>
+                </NuxtLink>
+            </div>
+        </div>
     </div>
 </template>
+
+<script setup>
+    import ProjectCard from '~/components/cards/ProjectCard.vue'
+
+    let projects = [];
+
+    const data = await useFetch('/api/projects')
+
+    for(let project of data.data.value){
+        projects.push(project)
+    }
+</script>
+
+<style scoped>
+    .link{
+        text-decoration: none;
+        color: black;
+    }
+    .container{
+        margin-top: 4%;
+    }
+    .col-12{
+        text-align: center;
+    }
+    .cardsrow{
+        margin-top: 4%;
+        justify-content: center;
+    }
+</style>
