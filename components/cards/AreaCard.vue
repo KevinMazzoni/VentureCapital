@@ -18,8 +18,7 @@
         url: String,
         caption: String
     })
-    const tmp = "AiMed.jpeg"
-    const image = useAssets(`/assets/projects/${tmp}`)
+    const image = useAssets(`/assets/projects/${url}`)
 </script>
 
 <style scoped>
