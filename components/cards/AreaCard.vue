@@ -12,13 +12,11 @@
 </template>
 
 <script setup>
-   import useAssets from "~/composables/useAssets.js" 
     const props = defineProps({
         name: String,
         image: String,
         description: String
     })
-    const image = useAssets(`/assets/areas/${props.image}`)
 </script>
 
 <style scoped>
