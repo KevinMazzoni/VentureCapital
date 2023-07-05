@@ -20,8 +20,6 @@
     const getImageUrl = (imageUrl) => {
         return new URL(imageUrl, import.meta.url).href
     };
-    
-    
 </script>
 
 <style scoped>
