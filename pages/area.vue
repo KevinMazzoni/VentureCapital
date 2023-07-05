@@ -20,7 +20,7 @@
         </div>
         <div class="row">
             <div class="col-12 button-col"> 
-                <button type="button" class="button-class caption">Go to projects</button>
+                <button type="button" class="button-class caption">Go to {{ name }} projects</button>
             </div>
         </div>
     </div>
