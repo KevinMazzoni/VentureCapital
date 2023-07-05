@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <img src="_nuxt/public/IntelliHire.jpg"> 
+                <img src="~/public/IntelliHire.jpg"> 
             </div>
         </div>
     </div>
