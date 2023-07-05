@@ -2,7 +2,7 @@
     <div class="container outer-container">
         <div class="row">
             <div class="col-12 cont fill">
-                <img :src="url" class="background-image">
+                <img :src="image" class="background-image">
                 <div class="title">
                     {{ name }}
                 </div>
@@ -12,11 +12,14 @@
 </template>
 
 <script setup>
+   import useAssets from "composables" 
     const props = defineProps({
         name: String,
         url: String,
         caption: String
     })
+    const tmp = "AiMed.jpeg"
+    const image = useAssets(`/assets/projects/${tmp}`)
 </script>
 
 <style scoped>
