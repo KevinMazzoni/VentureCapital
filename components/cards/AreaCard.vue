@@ -15,10 +15,10 @@
    import useAssets from "~/composables/useAssets.js" 
     const props = defineProps({
         name: String,
-        url: String,
-        caption: String
+        image: String,
+        description: String
     })
-    const image = useAssets(`/assets/projects/${url}`)
+    const image = useAssets(`/assets/areas/${props.image}`)
 </script>
 
 <style scoped>
