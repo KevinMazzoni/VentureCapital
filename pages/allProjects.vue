@@ -33,7 +33,6 @@
     let projects = [];
 
     const data = await useFetch('/api/projects')
-
     for(let project of data.data.value){
         projects.push(project)
     }

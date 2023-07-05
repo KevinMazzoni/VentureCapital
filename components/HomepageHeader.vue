@@ -7,6 +7,7 @@
                     <NuxtLink to="/allProjects" class="landmark">All Projects</NuxtLink>
                     <NuxtLink to="/allAreas" class="landmark">All Areas</NuxtLink>
                     <NuxtLink to="/contacts" class="landmark">Contacts</NuxtLink>
+                    <NuxtLink to="/allPersons" class="landmark">Our Team</NuxtLink>
                 </nav>
             </div>
         </div>
