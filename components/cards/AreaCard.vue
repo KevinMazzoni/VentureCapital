@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-   import useAssets from "composables" 
+   import useAssets from "~/composables/useAssets.js" 
     const props = defineProps({
         name: String,
         url: String,
