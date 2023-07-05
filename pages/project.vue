@@ -14,13 +14,13 @@
 <script lang="ts">
   export default {
     computed: {
-      projectName() {
+      projectName(): any {
         return this.$route.query.name || 'Valore predefinito se il parametro name non è presente';
       },
       projectText() {
         return this.$route.query.text || 'Valore predefinito se il parametro name non è presente';
       },
-      projectUrl() {
+      projectUrl(): any {
         return this.$route.query.url || 'Valore predefinito se il parametro name non è presente';
       }
     }
