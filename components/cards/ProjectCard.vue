@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 fill">
-                            <img :src="imageUrl" class="background-image">
+                            <img :src="url" class="background-image">
                             <div class="title">{{ name }}</div>
                         </div>
                     </div>
@@ -19,13 +19,13 @@
 </template>
 
 <script setup>
-    import useAssets from "~/composables/useAssets.js" 
+    //import useAssets from "~/composables/useAssets.js" 
     const props = defineProps({
         name: String,
         url: String,
         caption: String
     })
-    const imageUrl = useAssets(`/assets/projects/${props.url}`)
+    //const imageUrl = useAssets(`/assets/projects/${props.url}`)
 </script>
 
 <style scoped>

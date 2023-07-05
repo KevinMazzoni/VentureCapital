@@ -28,12 +28,14 @@
 
 <script setup>
     import ProjectCard from '~/components/cards/ProjectCard.vue'
+    import useAssets from "~/composables/useAssets.js" 
 
     let projects = [];
 
     const data = await useFetch('/api/projects')
 
     for(let project of data.data.value){
+        project.url = useAssets(`/assets/projects/${project.url}`)
         projects.push(project)
     }
 </script>
