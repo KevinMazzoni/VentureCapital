@@ -23,7 +23,7 @@
             <div class="col-12 button-col">
                 <NuxtLink :to="{
                     path: '/projectByArea',
-                    query: { areaId: id }
+                    query: { areaId: areaId, name: name, image: image, description: description, text: text, color: color }
                 }">
                     <button type="button" class="button-class caption">Go to {{ name }} projects</button>
                 </NuxtLink>
@@ -51,8 +51,8 @@ export default {
         color(): any {
             return this.$route.query.color || "Valore predefinito se il parametro name non è presente";
         },
-        id(): any {
-            return this.$route.query.id || "Valore predefinito se il parametro non è presente";
+        areaId(): any {
+            return this.$route.query.areaId || "Valore predefinito se il parametro non è presente";
         }
     }
 };
@@ -108,4 +108,5 @@ export default {
     font-size: xx-large;
     background-color: white;
     color: v-bind(color);
-}</style>
+}
+</style>
