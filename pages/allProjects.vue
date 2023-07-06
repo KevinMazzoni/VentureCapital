@@ -7,7 +7,6 @@
         </div>
         <div class="row">
             <div class="col-12 caption">
-                <button @click="refresh">Refresh</button>
                 Below you can find a list of all the projects we're funding. The list is constantly updated, the next project can be yours!
             </div>
         </div>
@@ -29,11 +28,13 @@
 
 <script setup>
     import ProjectCard from '~/components/cards/ProjectCard.vue'
+    import useAssets from "~/composables/useAssets.js" 
 
     let projects = [];
 
     const data = await useFetch('/api/projects')
     for(let project of data.data.value){
+        project.url = useAssets(`/assets/projects/${project.url}`)
         projects.push(project)
     }
 </script>

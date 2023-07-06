@@ -19,11 +19,13 @@
 </template>
 
 <script setup>
+    //import useAssets from "~/composables/useAssets.js" 
     const props = defineProps({
         name: String,
         url: String,
         caption: String
     })
+    //const imageUrl = useAssets(`/assets/projects/${props.url}`)
 </script>
 
 <style scoped>

@@ -15,9 +15,9 @@ const nuxtConfig: NuxtConfig = {
 
     modules: [
       '@nuxtjs/supabase'
-    ]
+    ],
 
-    // ssr: true,
+    //ssr: false
 
     // serverHandlers: [
     //   {

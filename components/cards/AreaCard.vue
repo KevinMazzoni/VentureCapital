@@ -2,7 +2,7 @@
     <div class="container outer-container">
         <div class="row">
             <div class="col-12 cont fill">
-                <img :src="getImageUrl(url)" class="background-image" />
+                <img :src="image" class="background-image">
                 <div class="title">
                     {{ name }}
                 </div>
@@ -14,14 +14,9 @@
 <script setup>
     const props = defineProps({
         name: String,
-        url: String,
-        caption: String
-    }); 
-    const getImageUrl = (imageUrl) => {
-        return new URL(imageUrl, import.meta.url).href
-    };
-    
-    
+        image: String,
+        description: String
+    })
 </script>
 
 <style scoped>
