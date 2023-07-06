@@ -2,7 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12 title">
-                Our team: short description
+                The team
+            </div>
+            <div class="description">
+                A set orthogonal and winning skills.  
             </div>
         </div>
         <div class="row cardsrow">
@@ -17,7 +20,7 @@
                     <PersonCard :name="card.name" :url="card.url" :role="card.role" :description="card.description"/>
                 </NuxtLink>
             </div>
-        </div>
+        </div>  
     </div>
 </template>
 
