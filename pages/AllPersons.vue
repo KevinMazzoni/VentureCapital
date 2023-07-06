@@ -22,12 +22,14 @@
 </template>
 
 <script setup>
-    import PersonCard from '~/components/cards/PersonCard.vue'
+    import PersonCard from '~/components/cards/PersonCard.vue';
+    import useAssets from '~/composables/useAssets.js';
 
     let persons = []
 
     const data = await useFetch('/api/persons')
     for(let person of data.data.value){
+        person.url = useAssets(`/assets/persons/${person.url}`)
         persons.push(person)
     }
 </script>
