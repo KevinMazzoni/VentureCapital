@@ -13,7 +13,7 @@
             <div v-for="card of persons" class="col-6">
                 <NuxtLink :to="{
                   path: '/person',
-                  query: { name: card.name, url:card.url, role:card.role, description:card.description}
+                  query: {id:card.id, name: card.name, url:card.url, role:card.role, description:card.description}
                 }"
                 class="link"
                 >
@@ -30,7 +30,7 @@
 
     let persons = []
 
-    const data = await useFetch('/api/persons')
+    const data = await useFetch('/api/persons', {params: {id: '10'}})
     for(let person of data.data.value){
         person.url = useAssets(`/assets/persons/${person.url}`)
         persons.push(person)

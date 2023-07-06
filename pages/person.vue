@@ -2,57 +2,56 @@
     <div class="container CV">
         <div class="row">
             <div class="col-3">
-                <img src="~\assets\persons\KevMaz.jpg">
+                <img :src="imageUrl">
             </div>
             <div class="col-3 title">
-               <!--{{ personName  }}-->
-               Kevin Mazzoni
+               {{name}}
             </div>
             <div class="row description">
-              <!--{{ personDescription }}-->
-              é un grandissimooooooooooooooooooooooooooooooooooooooooooooooooooo
-              oooooooooooooooooooooooooooooooooooooooooooooooooooooo
-              oooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-              ooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+              {{ description }}
             </div>
             <div class="row sectionName">
-                Projects supervised by Kevin Mazzoni <!--{{personName}}-->
+                Projects supervised by {{$route.query.Name}}
             </div>
             <div class="container">
                 <div class="row cardsrow">
                     <div class="col-6">
-                        <!-- {{ card.name }} {{ card.url }} {{ card.caption }} -->
-                        <NuxtLink :to="{
-                            path: '/project',
-                            query: { name: 'IntelliHire', text: 'ciao zio', url:''}
-                        }"
-                class="link"
-                >
-                    <ProjectCard :name="'IntelliHire'" url="'~\assets\persons\KevMaz.jpg'" :caption="'bella zio'"/>
-                </NuxtLink>
-            </div>
-        </div>
+                        <div v-for="project of projects" class="col-6">
+                            <NuxtLink :to="{
+                                path: '/project',
+                                query: { name: project.name, text: project.text, url:project.url}
+                            }"
+                            class="link"
+                            >
+                            
+                                <ProjectCard :name="project.name" :url="project.url" :caption="project.caption"/>
+                            </NuxtLink>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
     </div>
 </template>
+
 <script setup>
-    import ProjectCard from '~/components/cards/ProjectCard.vue'
-  /*export default {
-    computed: {
-      personName() {
-        return this.$route.query.name || 'Valore predefinito se il parametro name non è presente';
-      },
-      personDescription() {
-        return this.$route.query.Descriprion || 'Valore predefinito se il parametro name non è presente';
-      },
-      personUrl() {
-        return this.$route.query.url || 'Valore predefinito se il parametro name non è presente';
-      }
+import ProjectCard from '~/components/cards/ProjectCard.vue'
+
+    const route = useRoute()
+
+    const data = await useFetch('/api/supervised', { params: { id: route.query.id} })
+
+    const name = route.query.name
+    const description = route.query.description
+    const imageUrl = route.query.url
+    let projects = []
+    for(let project of data.data.value){
+        project.url = useAssets(`/assets/projects/${project.url}`)
+        projects.push(project)
     }
-  }; */
 </script>
+
 <style scoped>
 
     img{
