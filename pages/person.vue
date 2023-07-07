@@ -1,5 +1,5 @@
 <template>
-    <div class="container CV">
+    <div class="container margin">
         <div class="row">
             <div class="col-3">
                 <img :src="imageUrl">
@@ -7,9 +7,19 @@
             <div class="col-3 title">
                {{name}}
             </div>
-            <div class="row description">
-              {{ description }}
-            </div>
+            <p class="margin">
+               <span class="subtitle"> {{cv[0]}} </span>   <br>
+               
+               <span class="description"> {{ cv[1] }} </span>    
+            </p>
+            <p class="margin">
+                <span class="subtitle"> {{cv[2]}} </span>   <br>
+                <span class="description"> {{ cv[3] }} </span>   
+            </p>
+            <p class="margin">
+                <span class="subtitle"> {{cv[4]}} </span>   <br>
+                <span class="description"> {{ cv[5] }} </span>   
+            </p>
             <div class="row sectionName">
                 Projects supervised by {{name}}
             </div>
@@ -20,7 +30,6 @@
                                 path: '/project',
                                 query: { name: project.name, text: project.text, url:project.url}
                             }"
-                            class="link"
                             >
                             
                                 <AreaCard :name="project.name" :image="project.url"/>
@@ -52,19 +61,15 @@ import AreaCard from '~/components/cards/AreaCard.vue';
 </script>
 
 <style scoped>
-    .link{
-        text-decoration: none;
-        color: black;
-    }
 
     img{
         width: 100%;
         height: auto;
     }
     .description{
-        font-size: 40px;
+        font-size: 20px;
         font-family: century-gothic, sans-serif;
-        margin-top: 3%;
+        font-weight:500
     }
 
     .title{
@@ -78,7 +83,12 @@ import AreaCard from '~/components/cards/AreaCard.vue';
         margin-top: 8%;
     }
 
-    .CV{
+    .margin{
         margin-top: 3%;
+    }
+
+    .subtitle{
+        font-size: 30px;
+        font-weight:200
     }
 </style>
