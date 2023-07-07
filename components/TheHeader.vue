@@ -15,6 +15,7 @@
                         <NuxtLink to="/allAreas" class="landmark">All Areas</NuxtLink>
                         <NuxtLink to="/aboutUs" class="landmark">About us</NuxtLink>
                         <NuxtLink to="/allPersons" class="landmark">Our Team</NuxtLink>
+                        <NuxtLink to="/majorProjects" class="landmark">Major Projects</NuxtLink>
                     </nav>
                 </div>
             </div>
@@ -38,7 +39,7 @@
     }
     header {
         width: 100vw;
-        background-color: darkblue;
+        background-color: rgb(70, 107, 145);
         height: 100px;
         margin-top: 0px;
         padding-top: 10px;
