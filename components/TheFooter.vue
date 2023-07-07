@@ -31,7 +31,7 @@
 <style scoped>
     footer {
         width: 100%;
-        background-color: darkblue;
+        background-color: rgb(70, 107, 145);
         height: 10vh
     }
 
