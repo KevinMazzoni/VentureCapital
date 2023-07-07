@@ -39,7 +39,7 @@
     }
     header {
         width: 100vw;
-        background-color: darkblue;
+        background-color: rgb(70, 107, 145);
         height: 100px;
         margin-top: 0px;
         padding-top: 10px;
