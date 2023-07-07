@@ -14,11 +14,11 @@
             <div v-for="area of areas" class="col-4">
                 <NuxtLink :to="{
                   path: '/area',
-                  query: { name: area.name, image:area.image, description: area.description, text: area.text, color: area.color }
+                  query: { areaId: area.id, name: area.name, image:area.image, description: area.description, text: area.text, color: area.color }
                 }" 
                 class="link"
                 >
-                    <AreaCard :name="area.name" :image="area.image" :description="area.description" :text="area.text" :color="area.color"/>
+                    <AreaCard :name="area.name" :image="area.image"/>
                 </NuxtLink>
             </div>
         </div>
@@ -32,7 +32,6 @@
     let areas = [];
 
     const data = await useFetch('/api/areas')
-
     for(let area of data.data.value){
         area.image = useAssets(`/assets/areas/${area.image}`)
         areas.push(area)

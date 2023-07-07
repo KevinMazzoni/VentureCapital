@@ -1,0 +1,54 @@
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 title">
+                The team
+            </div>
+            <div class="description">
+                A set orthogonal and winning skills.  
+            </div>
+        </div>
+        <div class="row cardsrow">
+        
+            <div v-for="card of persons" class="col-6">
+                <NuxtLink :to="{
+                  path: '/person',
+                  query: {id:card.id, name: card.name, url:card.url, role:card.role, description:card.description}
+                }"
+                class="link"
+                >
+                    <PersonCard :name="card.name" :url="card.url" :role="card.role" :description="card.description"/>
+                </NuxtLink>
+            </div>
+        </div>  
+    </div>
+</template>
+
+<script setup>
+    import PersonCard from '~/components/cards/PersonCard.vue';
+    import useAssets from '~/composables/useAssets.js';
+
+    let persons = []
+
+    const data = await useFetch('/api/persons', {params: {id: '10'}})
+    for(let person of data.data.value){
+        person.url = useAssets(`/assets/persons/${person.url}`)
+        persons.push(person)
+    }
+</script>
+<style scoped>
+    .link{
+        text-decoration: none;
+        color: black;
+    }
+    .container{
+        margin-top: 4%;
+    }
+    .col-12{
+        text-align: center;
+    }
+    .cardsrow{
+        margin-top: 4%;
+        justify-content: center;
+    }
+</style>
