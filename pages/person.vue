@@ -66,12 +66,6 @@ import AreaCard from '~/components/cards/AreaCard.vue';
         width: 100%;
         height: auto;
     }
-    .description{
-        font-size: 20px;
-        font-family: century-gothic, sans-serif;
-        font-weight:500
-    }
-
     .title{
         margin-top: 8%;
     }

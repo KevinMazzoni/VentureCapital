@@ -20,11 +20,16 @@ body{
     /* background-color: blue;
     margin: 175px; */
 }
+.description{
+    font-size: 20px;
+    font-family: "century-gothic, sans-serif";
+    margin-top: 3%;
+}
 
 
 .title{
     font-size: xx-large;
-    font-family: 'NewStyle', sans-serif;
+    /*font-family: 'NewStyle', sans-serif;*/
 }
 
 .caption{

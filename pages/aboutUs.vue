@@ -50,10 +50,4 @@ const url = useAssets(`/assets/persons/${data.url}`)
     background-color: lightblue;
     color: white;
 }
-    .description{
-        font-size: 20px;
-        font-family: century-gothic, sans-serif;
-        margin-top: 3%;
-    }
-
 </style>

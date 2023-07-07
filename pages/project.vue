@@ -32,12 +32,6 @@
         height: 600px;
         object-fit: cover;
     }
-    .description{
-        font-size: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        margin-top: 3%;
-    }
-
     .container{
         margin-bottom: 5%;
     }

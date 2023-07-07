@@ -2,7 +2,7 @@
   <div class="container mt-4">
     <div class="row mb-4">
       <div class="col-7 outer-container ">
-        <div class="title mb-4">IF YOU WANT TO KNOW MORE</div>
+        <div class="title mb-4">If you want to know more</div>
         <div class="row-lg mb-4 contacts">
       Email us at <a href="info@gloriousKoalas.com" class="a">info@gloriousKoalas.com</a>
     </div>
@@ -38,10 +38,10 @@
           <div class="col-lg-6 text-center">
             <!-- Contenuto di testo centrato -->
             <div class="headquarter-text">
-              <h1>Headquarter</h1>
-              <p>Via Aurelio Saffi 29 – 20123 Milano</p>
-              <p>+39 02.45496412</p>
-              <p>+39 02.45496418</p>
+              <div class="title">Headquarter</div>
+              <div class="description">Via Aurelio Saffi 29 – 20123 Milano</div>
+              <div class="description">+39 02.45496412</div>
+              <div class="description">+39 02.45496418</div>
             </div>
           </div>
           <div class="col-lg-6">
