@@ -25,7 +25,7 @@
 <script setup>
     import useAssets from '~/composables/useAssets';
     const rowData = await useFetch('/api/aboutUs');
-    console.log(rowData)
+    console.log(rowData.data._value)
     const data = rowData.data._value
     const url = useAssets(`/assets/persons/${data.url}`)
 </script>
