@@ -11,11 +11,10 @@
               {{ description }}
             </div>
             <div class="row sectionName">
-                Projects supervised by {{$route.query.Name}}
+                Projects supervised by {{name}}
             </div>
             <div class="container">
                 <div class="row cardsrow">
-                    <div class="col-6">
                         <div v-for="project of projects" class="col-6">
                             <NuxtLink :to="{
                                 path: '/project',
@@ -26,7 +25,6 @@
                             
                                 <ProjectCard :name="project.name" :url="project.url" :caption="project.caption"/>
                             </NuxtLink>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -53,6 +51,10 @@ import ProjectCard from '~/components/cards/ProjectCard.vue'
 </script>
 
 <style scoped>
+    .link{
+        text-decoration: none;
+        color: black;
+    }
 
     img{
         width: 100%;
