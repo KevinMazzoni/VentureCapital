@@ -18,7 +18,7 @@
                 }" 
                 class="link"
                 >
-                    <AreaCard :name="area.name" :image="area.image" :description="area.description" :text="area.text" :color="area.color"/>
+                    <AreaCard :name="area.name" :image="area.image"/>
                 </NuxtLink>
             </div>
         </div>

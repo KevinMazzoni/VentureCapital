@@ -13,9 +13,10 @@
         <p class="row-3">
             {{ role }}
         </p>
-        <p class="row-4">
+        <!--<p class="row-4">
             "{{ description }}"
         </p>
+    -->
     </div>  
 </template>
 <script setup>

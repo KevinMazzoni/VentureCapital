@@ -14,8 +14,8 @@
                 Projects supervised by {{name}}
             </div>
             <div class="container">
-                <div class="row cardsrow">
-                        <div v-for="project of projects" class="col-6">
+                <div class="row">
+                        <div v-for="project of projects" class="col-3" >
                             <NuxtLink :to="{
                                 path: '/project',
                                 query: { name: project.name, text: project.text, url:project.url}
@@ -23,7 +23,7 @@
                             class="link"
                             >
                             
-                                <ProjectCard :name="project.name" :url="project.url" :caption="project.caption"/>
+                                <AreaCard :name="project.name" :image="project.url"/>
                             </NuxtLink>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import ProjectCard from '~/components/cards/ProjectCard.vue'
+import AreaCard from '~/components/cards/AreaCard.vue';
 
     const route = useRoute()
 
@@ -42,6 +42,7 @@ import ProjectCard from '~/components/cards/ProjectCard.vue'
 
     const name = route.query.name
     const description = route.query.description
+    let cv = description.split('*')
     const imageUrl = route.query.url
     let projects = []
     for(let project of data.data.value){
@@ -79,10 +80,5 @@ import ProjectCard from '~/components/cards/ProjectCard.vue'
 
     .CV{
         margin-top: 3%;
-    }
-
-    .cardsrow{
-        margin-top: 4%;
-        justify-content: center;
     }
 </style>
