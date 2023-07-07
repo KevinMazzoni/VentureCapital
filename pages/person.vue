@@ -1,5 +1,5 @@
 <template>
-    <div class="container CV">
+    <div class="container margin">
         <div class="row">
             <div class="col-3">
                 <img :src="imageUrl">
@@ -7,26 +7,33 @@
             <div class="col-3 title">
                {{name}}
             </div>
-            <div class="row description">
-              {{ description }}
-            </div>
+            <p class="margin">
+               <span class="subtitle"> {{cv[0]}} </span>   <br>
+               
+               <span class="description"> {{ cv[1] }} </span>    
+            </p>
+            <p class="margin">
+                <span class="subtitle"> {{cv[2]}} </span>   <br>
+                <span class="description"> {{ cv[3] }} </span>   
+            </p>
+            <p class="margin">
+                <span class="subtitle"> {{cv[4]}} </span>   <br>
+                <span class="description"> {{ cv[5] }} </span>   
+            </p>
             <div class="row sectionName">
-                Projects supervised by {{$route.query.Name}}
+                Projects supervised by {{name}}
             </div>
             <div class="container">
-                <div class="row cardsrow">
-                    <div class="col-6">
-                        <div v-for="project of projects" class="col-6">
+                <div class="row">
+                        <div v-for="project of projects" class="col-3" >
                             <NuxtLink :to="{
                                 path: '/project',
                                 query: { name: project.name, text: project.text, url:project.url}
                             }"
-                            class="link"
                             >
                             
-                                <ProjectCard :name="project.name" :url="project.url" :caption="project.caption"/>
+                                <AreaCard :name="project.name" :image="project.url"/>
                             </NuxtLink>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -36,7 +43,7 @@
 </template>
 
 <script setup>
-import ProjectCard from '~/components/cards/ProjectCard.vue'
+import AreaCard from '~/components/cards/AreaCard.vue';
 
     const route = useRoute()
 
@@ -44,6 +51,7 @@ import ProjectCard from '~/components/cards/ProjectCard.vue'
 
     const name = route.query.name
     const description = route.query.description
+    let cv = description.split('*')
     const imageUrl = route.query.url
     let projects = []
     for(let project of data.data.value){
@@ -59,9 +67,9 @@ import ProjectCard from '~/components/cards/ProjectCard.vue'
         height: auto;
     }
     .description{
-        font-size: 40px;
+        font-size: 20px;
         font-family: century-gothic, sans-serif;
-        margin-top: 3%;
+        font-weight:500
     }
 
     .title{
@@ -75,12 +83,12 @@ import ProjectCard from '~/components/cards/ProjectCard.vue'
         margin-top: 8%;
     }
 
-    .CV{
+    .margin{
         margin-top: 3%;
     }
 
-    .cardsrow{
-        margin-top: 4%;
-        justify-content: center;
+    .subtitle{
+        font-size: 30px;
+        font-weight:200
     }
 </style>
