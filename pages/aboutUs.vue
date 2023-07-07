@@ -1,10 +1,23 @@
 <template>
+
+    <div class="row ">
+        <div class="container-motto text-center mt-4">
+            "{{ data.motto }}"
+        </div>
+    </div>
     <img :src="url" class="centered-image mt-4">
     <div class="container">
-        
-        <div class="row">
-            <div class="container-motto text-center mt-4">
-                "{{ data.motto }}"
+
+        <div class="outer-container mt-4">
+            <div class="row mt-2">
+                <div class="col-6">
+                        <div class='title'>Our story</div>
+                        <div class="description"> {{ data.story }} </div>
+                </div>
+                <div class="col-6">
+                        <div class="title">Our vision</div>
+                        <div class="description"> {{ data.strategy }} </div>
+                </div>
             </div>
         </div>
     </div>
@@ -20,17 +33,27 @@ const url = useAssets(`/assets/persons/${data.url}`)
 
 <style scoped>
 .centered-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  object-fit: cover;
-  margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    object-fit: cover;
+    margin: 0 auto;
 }
+
 .container-motto {
     font-style: italic;
+    margin-left: 10%;
     font-size: xx-large;
-    width: 100%;
+    width: 80%;
+    height: 50px;
     background-color: lightblue;
+    color: white;
 }
+    .description{
+        font-size: 20px;
+        font-family: century-gothic, sans-serif;
+        margin-top: 3%;
+    }
+
 </style>
