@@ -25,7 +25,6 @@
 <script setup>
     const rowData = await useFetch('/api/aboutUs');
     const data = rowData.data._value
-    console.log(data)
     const url = useAssets(`/assets/persons/${data.url}`)
 </script>
 
