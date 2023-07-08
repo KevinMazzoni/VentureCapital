@@ -1,9 +1,6 @@
 <template>
     <div>
         <img :src="image" :style="{ width: '100%', height: '600px' }"> <!--width="100%" height="600">-->
-        <h1 class="text_over_image title text-center">
-            {{ name }}
-        </h1>
     </div>
     <div class="container">
 
