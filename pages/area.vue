@@ -1,9 +1,6 @@
 <template>
     <div>
-        <img :src="image" :style="{ width: '100%', height: '600px' }"> <!--width="100%" height="600">-->
-        <h1 class="text_over_image title text-center">
-            {{ name }}
-        </h1>
+        <img :src="image" :alt="color" :style="{ width: '100%', height: '600px'}">
     </div>
     <div class="container">
 
@@ -121,6 +118,7 @@ export default {
 }
 
 .img {
+    alt: v-bind(color);
     width: "100%";
     height: "600";
 }
