@@ -1,13 +1,13 @@
 <template>
-    <div class="row ">
+    <div class="row mt-4">
         <div class="container-motto text-center mt-4">
             "{{ data.motto }}"
         </div>
     </div>
-    <img :src="url" class="centered-image mt-4">
-    <div class="container">
+    <img :src="url" alt="five members of the team smiling" class="centered-image mt-4">
+    <div class="container mb-4">
 
-        <div class="outer-container mt-4">
+        <div class="outer-container mb-4 mt-4">
             <div class="row mt-2">
                 <div class="col-6">
                     <div class='title'>Our story</div>
@@ -43,7 +43,7 @@
     font-size: xx-large;
     width: 80%;
     height: 50px;
-    background-color: lightblue;
+    background-color:  rgb(70, 107, 145);
     color: white;
 }
 </style>
