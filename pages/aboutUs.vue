@@ -23,7 +23,6 @@
 </template>
 
 <script setup>
-    import useAssets from '~/composables/useAssets';
     const rowData = await useFetch('/api/aboutUs');
     const data = rowData.data._value
     console.log(data)
