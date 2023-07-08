@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 fill">
-                            <img :src="url" class="background-image">
+                            <img :src="url" class="background-image" alt="representative image of the project">
                             <div class="title">{{ name }}</div>
                         </div>
                     </div>

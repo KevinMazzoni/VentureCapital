@@ -1,5 +1,5 @@
 <template>
-    <img :src="projectUrl">
+    <img :src="projectUrl" alt="representative image of the project">
     <div class="container">
         <div class="row">
             <div class="col-6 title projectTitle">

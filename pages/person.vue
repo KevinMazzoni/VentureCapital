@@ -2,7 +2,7 @@
     <div class="container margin">
         <div class="row">
             <div class="col-3">
-                <img :src="imageUrl">
+                <img :src="imageUrl" alt="close-up photo of the person">
             </div>
             <div class="col-3 title">
                {{name}}
@@ -21,6 +21,7 @@
                 <span class="description"> {{ cv[5] }} </span>   
             </p>
             <div class="row sectionName">
+                <hr>
                 Projects supervised by {{name}}
             </div>
             <div class="container">
@@ -37,7 +38,16 @@
                     </div>
                 </div>
             </div>
-
+            <hr>
+            <div class="row button-row">
+                <div class="col-4">
+                    <NuxtLink to="/AllPersons">
+                        <button type="button" class="button-class caption">
+                            Back to all persons
+                        </button>
+                    </NuxtLink>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -84,5 +94,23 @@ import AreaCard from '~/components/cards/AreaCard.vue';
     .subtitle{
         font-size: 30px;
         font-weight:200
+    }
+    .button-row{
+        margin-top: 4%;
+        margin-bottom: 4%;
+        justify-content: end;
+    }
+    .button-class {
+        border-radius: 10px;
+        font-size: xx-large;
+        background-color: rgb(70, 107, 145);
+        color: white;
+    }
+
+    .button-class:hover {
+        border-radius: 10px;
+        font-size: xx-large;
+        background-color: white;
+        color: v-bind(color);
     }
 </style>

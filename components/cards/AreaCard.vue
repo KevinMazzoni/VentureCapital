@@ -2,7 +2,7 @@
     <div class="container outer-container">
         <div class="row">
             <div class="col-12 cont fill">
-                <img :src="image" class="background-image">
+                <img :src="image" alt="Image with the colour associated to the area" class="background-image">
                 <div class="title">
                     {{ name }}
                 </div>
@@ -14,8 +14,7 @@
 <script setup>
     const props = defineProps({
         name: String,
-        image: String,
-        description: String
+        image: String
     })
 </script>
 
