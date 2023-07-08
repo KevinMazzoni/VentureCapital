@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
     const splitted = url.split("=")
     const areaId = splitted[1]
     const client = serverSupabaseClient(event)
-    const { data, error } = await client.from('projects').select("id, name, url, caption, text").eq('Area', areaId)   
+    const { data, error } = await client.from('projects').select("id, name, url, caption, text, SupervisedBy").eq('Area', areaId)   
     if(error){
         throw createError({statusCode: 400, statusMessage: error.message})
     }
