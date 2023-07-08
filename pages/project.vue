@@ -5,26 +5,29 @@
             <div class="col-6 title projectTitle">
                {{ projectName  }}
             </div>
-            <div class="description">
-              {{ projectText }}
+            <div>
+              <p class="margin description">
+                {{ paragraphs[0] }}
+              </p>
+           
+                <p class="margin">
+                  <span class="subtitle"> Our investment drivers... </span>   <br>
+                </p>    
+                <p>
+                  <span class="description margin"> {{ paragraphs[1] }} </span>   
+                </p>              
             </div>
         </div>
     </div>
 </template>
-<script lang="ts">
-  export default {
-    computed: {
-      projectName(): any {
-        return this.$route.query.name || 'Valore predefinito se il parametro name non è presente';
-      },
-      projectText() {
-        return this.$route.query.text || 'Valore predefinito se il parametro name non è presente';
-      },
-      projectUrl(): any {
-        return this.$route.query.url || 'Valore predefinito se il parametro name non è presente';
-      }
-    }
-  };
+<script setup>
+
+  const route = useRoute();
+  const projectName = route.query.name;
+  const projectText = route.query.text;
+  const projectUrl = route.query.url;
+
+  let paragraphs = projectText.split("*");
 </script>
 <style scoped>
     img{
@@ -38,5 +41,14 @@
 
     .projectTitle{
       margin-top: 5%;
+    }
+
+    .subtitle{
+        font-size: 30px;
+        font-weight:600;
+    }
+
+    .margin{
+        margin-top: 3%;
     }
 </style>
