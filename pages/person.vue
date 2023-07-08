@@ -2,7 +2,7 @@
     <div class="container margin">
         <div class="row">
             <div class="col-3">
-                <img :src="imageUrl">
+                <img :src="imageUrl" alt="close-up photo of the person">
             </div>
             <div class="col-3 title">
                {{name}}

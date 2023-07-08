@@ -3,7 +3,7 @@
         <div class="row-1">
             <div class="row">
                 <div class="col fill">
-                    <img :src="url" class="image">
+                    <img :src="url" class="image" alt="close-up photo of the person">
                 </div>
             </div> 
         </div>
@@ -13,10 +13,6 @@
         <p class="row-3">
             {{ role }}
         </p>
-        <!--<p class="row-4">
-            "{{ description }}"
-        </p>
-    -->
     </div>  
 </template>
 <script setup>
