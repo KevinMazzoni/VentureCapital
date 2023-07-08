@@ -14,8 +14,7 @@
 <script setup>
     const props = defineProps({
         name: String,
-        image: String,
-        description: String
+        image: String
     })
 </script>
 
