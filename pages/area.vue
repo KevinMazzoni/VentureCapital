@@ -1,11 +1,6 @@
 <template>
-    <div class="wrap">
-        <div>
-            <img :src="image" width="100%" height="600">
-            <h1 class="text_over_image title">
-                {{ name }}
-            </h1>
-        </div>
+    <div>
+        <img :src="image" :alt="color" :style="{ width: '100%', height: '600px'}">
     </div>
     <div class="container">
 
@@ -20,12 +15,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 button-col">
+            <div class="col-6 button-col">
+                <NuxtLink to="/allAreas">
+                    <button type="button" class="button-class caption">All areas</button>
+                </NuxtLink>
+            </div>
+            <div class="col-6 button-col">
                 <NuxtLink :to="{
                     path: '/projectByArea',
                     query: { areaId: areaId, name: name, image: image, description: description, text: text, color: color }
                 }">
-                    <button type="button" class="button-class caption">Go to {{ name }} projects</button>
+                    <button type="button" class="button-class caption">{{ name }} projects</button>
                 </NuxtLink>
             </div>
         </div>
@@ -54,6 +54,13 @@ export default {
         areaId(): any {
             return this.$route.query.areaId || "Valore predefinito se il parametro non è presente";
         }
+    },
+    mounted() {
+        const image = new Image();
+        image.src = this.image;
+        image.onload = () => {
+            this.$forceUpdate();
+        };
     }
 };
 </script>
@@ -99,7 +106,7 @@ export default {
 .button-class {
     border-radius: 10px;
     font-size: xx-large;
-    background-color: v-bind(color);
+    background-color: rgb(70, 107, 145);
     color: white;
 }
 
@@ -108,5 +115,11 @@ export default {
     font-size: xx-large;
     background-color: white;
     color: v-bind(color);
+}
+
+.img {
+    alt: v-bind(color);
+    width: "100%";
+    height: "600";
 }
 </style>

@@ -2,20 +2,21 @@
     <div class="container">
         <div class="row landmarksrow">
             <div class="col-12">
-                <nav class="nav">
+                <!-- <nav class="nav">
                     <NuxtLink to="/" class="landmark">Home</NuxtLink>
                     <NuxtLink to="/allProjects" class="landmark">All Projects</NuxtLink>
                     <NuxtLink to="/allAreas" class="landmark">All Areas</NuxtLink>
                     <NuxtLink to="/aboutUs" class="landmark">About us</NuxtLink>
                     <NuxtLink to="/allPersons" class="landmark">Our Team</NuxtLink>
                     <NuxtLink to="/majorProjects" class="landmark">Major Projects</NuxtLink>
-                </nav>
+                </nav> -->
+                <AnotherHeader/>
             </div>
         </div>
         <div class="row logorow">
             <div class="col-12">
                 <NuxtLink to="/">
-                    <img src="../assets/GloriousKoalasLogoBW.png" class="image">
+                    <img src="../assets/GloriousKoalasLogoBW.png" alt="Logo of gloriousKoala, with a stylized Koala, and the motto 'We believe in you, we invest in you'" class="image">
                 </NuxtLink>
             </div>
         </div>
@@ -33,7 +34,6 @@
     .landmarksrow{
         position: absolute;
         width: 100%;
-        margin-top: 4%;
     }
     .logorow{
         
