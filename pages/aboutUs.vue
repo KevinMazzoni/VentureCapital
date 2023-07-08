@@ -23,8 +23,7 @@
 </template>
 
 <script setup>
-    const rowData = await useFetch('/api/aboutUs');
-    const data = rowData.data._value
+    import data from 'assets/aboutUs/aboutUs.json'
     const url = useAssets(`/assets/persons/${data.url}`)
 </script>
 
