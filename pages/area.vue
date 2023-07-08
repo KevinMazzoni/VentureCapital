@@ -18,7 +18,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 button-col">
+            <div class="col-6 button-col">
+                <NuxtLink to="/allAreas">
+                    <button type="button" class="button-class caption">All areas</button>
+                </NuxtLink>
+            </div>
+            <div class="col-6 button-col">
                 <NuxtLink :to="{
                     path: '/projectByArea',
                     query: { areaId: areaId, name: name, image: image, description: description, text: text, color: color }
@@ -107,7 +112,8 @@ export default {
     background-color: white;
     color: v-bind(color);
 }
-.img{
+
+.img {
     width: "100%";
     height: "600";
 }
