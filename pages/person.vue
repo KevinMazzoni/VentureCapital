@@ -28,7 +28,7 @@
                         <div v-for="project of projects" class="col-3" >
                             <NuxtLink :to="{
                                 path: '/project',
-                                query: { name: project.name, text: project.text, url:project.url}
+                                query: { name: project.name, text: project.text, url:project.url, supervisedBy:id}
                             }"
                             >
                             
@@ -50,9 +50,11 @@ import AreaCard from '~/components/cards/AreaCard.vue';
     const data = await useFetch('/api/supervised', { params: { id: route.query.id} })
 
     const name = route.query.name
+    const id = route.query.id
     const description = route.query.description
     let cv = description.split('*')
-    const imageUrl = route.query.url
+    const imageUrl = useAssets(`/assets/persons/${route.query.url}`)
+    console.log(imageUrl)
     let projects = []
     for(let project of data.data.value){
         project.url = useAssets(`/assets/projects/${project.url}`)

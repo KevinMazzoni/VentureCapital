@@ -4,10 +4,9 @@ export default defineEventHandler(async (event) => {
     
     const url = event.node.req.url
     const splitted = url.split("=")
-    const supervisedId = splitted[1]
+    const supervisorId = splitted[1]
     const client = serverSupabaseClient(event)
-
-    const { data, error } = await client.from('projects').select("id, name, url, caption, text, SupervisedBy").eq('SupervisedBy', supervisedId)   
+    const { data, error } = await client.from('persons').select("id, name, role, description, url").eq('id', supervisorId)   
     if(error){
         throw createError({statusCode: 400, statusMessage: error.message})
     }
