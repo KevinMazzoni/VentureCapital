@@ -3,7 +3,7 @@
         <div>
             <img :src="image" width="100%" height="600">
             <h1 class="text_over_image title">
-                {{ name }} Prova deploy
+                {{ name }}
             </h1>
         </div>
     </div>
@@ -54,13 +54,6 @@ export default {
         areaId(): any {
             return this.$route.query.areaId || "Valore predefinito se il parametro non è presente";
         }
-    },
-    mounted() {
-        const image = new Image();
-        image.src = this.image;
-        image.onload = () => {
-            this.$forceUpdate();
-        };
     }
 };
 </script>
