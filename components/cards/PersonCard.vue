@@ -60,7 +60,6 @@
     }
     img{
         border-radius: 10px;
-        filter: brightness(60%);
         max-width: 300px;
         max-height: 300px;
         width: 100%;
