@@ -3,7 +3,7 @@
         <div>
             <img :src="image" width="100%" height="600">
             <h1 class="text_over_image title">
-                {{ name }}
+                {{ name }} Prova deploy
             </h1>
         </div>
     </div>
