@@ -54,6 +54,13 @@ export default {
         areaId(): any {
             return this.$route.query.areaId || "Valore predefinito se il parametro non è presente";
         }
+    },
+    mounted() {
+        const image = new Image();
+        image.src = this.image;
+        image.onload = () => {
+            this.$forceUpdate();
+        };
     }
 };
 </script>
