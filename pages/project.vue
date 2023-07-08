@@ -18,7 +18,7 @@
     <div class="title col-6">Supervisor:
       <NuxtLink class="link title" :to="{
         path: '/person',
-        query: { id: supervisor.id, name: supervisor.name, url: supervisor.url, role: supervisor.role, description: supervisor.description }
+        query: { id: supervisor.id, name: supervisor.name, url: imageUrl, role: supervisor.role, description: supervisor.description }
 
       }"> {{ supervisor.name }}</NuxtLink>
     </div>
@@ -32,6 +32,8 @@ const projectUrl = route.query.url;
 let paragraphs = projectText.split("*");
 const data = await useFetch('/api/supervisor', { params: { id: route.query.supervisedBy } })
 const supervisor = data.data._value[0]
+const imageUrl = useAssets(`/assets/persons/${supervisor.url}`)
+
 </script>
 <style scoped>
 img {

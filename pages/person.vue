@@ -53,8 +53,7 @@ import AreaCard from '~/components/cards/AreaCard.vue';
     const id = route.query.id
     const description = route.query.description
     let cv = description.split('*')
-    const imageUrl = useAssets(`/assets/persons/${route.query.url}`)
-    console.log(imageUrl)
+    const imageUrl = route.query.url
     let projects = []
     for(let project of data.data.value){
         project.url = useAssets(`/assets/projects/${project.url}`)
