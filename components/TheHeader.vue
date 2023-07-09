@@ -30,8 +30,8 @@
     }
     .image{
         width: 100%;
-        height: 100%;
-        padding-left: 30px;
+        min-width: 200px;
+        height: auto;
         padding-top: 4px;
     }
     .logo{
@@ -40,11 +40,11 @@
     header {
         width: 100vw;
         background-color: rgb(70, 107, 145);
-        height: 100px;
         margin-top: 0px;
         padding-top: 10px;
         padding-bottom: 10px;
-        position: fixed;
+        position: sticky;
+        top: 0;
     }
 
     nav {

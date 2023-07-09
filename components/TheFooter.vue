@@ -20,9 +20,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    Menu
-                </div>
             </div>
         </div>
     </footer>
@@ -32,7 +29,6 @@
     footer {
         width: 100%;
         background-color: rgb(70, 107, 145);
-        height: 10vh
     }
 
     .container{

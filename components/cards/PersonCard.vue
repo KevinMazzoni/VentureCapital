@@ -62,7 +62,9 @@
         border-radius: 10px;
         max-width: 300px;
         max-height: 300px;
-        width: 100%;
+        width: auto;
+        height: 100%;
+
     }
     
     .row-2{
