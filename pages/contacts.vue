@@ -4,7 +4,7 @@
       <div class="col-7 outer-container ">
         <div class="title mb-4">If you want to know more</div>
         <div class="row-lg mb-4 contacts">
-          Email us at <a href="info@gloriousKoalas.com" class="a">info@gloriousKoalas.com</a>
+          Email us at <a href="mailto:info@gloriousKoalas.com" class="a">info@gloriousKoalas.com</a>
         </div>
         <div class="row-lg mb-4 contacts">
           Search us on <a href="https://it.linkedin.com/company/microsoft" class="a" target="_blank">linkedin</a>

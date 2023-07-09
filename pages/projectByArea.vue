@@ -71,7 +71,7 @@
 .button-class {
     border-radius: 10px;
     font-size: xx-large;
-    background-color: v-bind(styleColor);
+    background-color: rgb(70, 107, 145);
     color: white;
 }
 
