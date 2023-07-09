@@ -27,7 +27,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                        <div v-for="project of projects" class="col-3" >
+                        <div v-for="project of projects" class="col-3 minwidth" >
                             <NuxtLink :to="{
                                 path: '/project',
                                 query: { name: project.name, text: project.text, url:project.url, supervisedBy:id}
@@ -114,5 +114,9 @@ import AreaCard from '~/components/cards/AreaCard.vue';
         font-size: xx-large;
         background-color: white;
         color: v-bind(color);
+    }
+
+    .minwidth{
+        min-width: 400px
     }
 </style>
