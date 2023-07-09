@@ -38,7 +38,7 @@
         margin-top: 0px;
     }
     header {
-        width: 100vw;
+        width: 100%;
         background-color: rgb(70, 107, 145);
         margin-top: 0px;
         padding-top: 10px;

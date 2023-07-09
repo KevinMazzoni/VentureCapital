@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="row areas">
-            <div v-for="area of areas" class="col-4">
+            <div v-for="area of areas" class="col-4 minwidth">
                 <NuxtLink :to="{
                   path: '/area',
                   query: { areaId: area.id, name: area.name, image:area.image, description: area.description, text: area.text, color: area.color }
@@ -52,5 +52,8 @@
     .areas{
         margin-top: 3%;
         justify-content: center;
+    }
+    .minwidth{
+        min-width: 400px;
     }
 </style>

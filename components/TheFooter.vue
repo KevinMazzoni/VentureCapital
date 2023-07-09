@@ -2,23 +2,12 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-6 contacts">
                     <NuxtLink to="/contacts" class="link">Contact us</NuxtLink>
                 </div>
-                <div class="col-4">
-                    <div class="container">
-                        <!-- <div class="row">
-                            <div class="col-12">
-                                This site was realized by Glorious Koalas Inc.
-                            </div>
-                        </div> -->
-                        <div class="row">
-                            <div class="col-12">
-                                <!-- @All rights reserved -->
-                                <img src="~/assets/copyright.png" alt="Contains the tesxt 'copyright-All rights reserved'" class="copyright-image"> 
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-6">
+                    <!-- @All rights reserved -->
+                    <img src="~/assets/copyright.png" alt="Contains the text 'copyright-All rights reserved'" class="copyright-image"> 
                 </div>
             </div>
         </div>
@@ -43,8 +32,8 @@
         color: white;
     }
 
-    .col-4{
-        margin: auto;
+    .contacts{
+        margin-top: 1.5%;
         text-align: center;
     }
 
@@ -54,7 +43,8 @@
     }
 
     .copyright-image{
-        height: 70px
+        width: 40%;
+        min-width: 200px
     }
 
 </style>
