@@ -20,8 +20,9 @@
                 <span class="subtitle"> {{cv[4]}} </span>   <br>
                 <span class="description"> {{ cv[5] }} </span>   
             </p>
-            <div class="row sectionName">
+            <div class="row sectionName"  v-if="projects && projects.length > 0">
                 <hr>
+
                 Projects supervised by {{name}}
             </div>
             <div class="container">

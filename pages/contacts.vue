@@ -4,11 +4,11 @@
       <div class="col-7 outer-container ">
         <div class="title mb-4">If you want to know more</div>
         <div class="row-lg mb-4 contacts">
-      Email us at <a href="info@gloriousKoalas.com" class="a">info@gloriousKoalas.com</a>
-    </div>
-    <div class="row-lg mb-4 contacts">
-      Search us on <a href="https://it.linkedin.com/company/microsoft" class="a">linkedin</a>
-    </div>
+          Email us at <a href="info@gloriousKoalas.com" class="a">info@gloriousKoalas.com</a>
+        </div>
+        <div class="row-lg mb-4 contacts">
+          Search us on <a href="https://it.linkedin.com/company/microsoft" class="a" target="_blank">linkedin</a>
+        </div>
       </div>
       <div class="col-lg container-submit-projects">
         <div class="title">Submit your project </div>
@@ -31,23 +31,18 @@
     </div>
   </div>
   <div class="spacer"></div>
-  <div class="row mt-4">
-    <div class="col-8">
-      <div class="panel-container">
-        <div class="row">
-          <div class="col-lg-6 text-center">
-            <!-- Contenuto di testo centrato -->
-            <div class="headquarter-text">
-              <div class="title">Headquarter</div>
-              <div class="description">Via Aurelio Saffi 29 – 20123 Milano</div>
-              <div class="description">+39 02.45496412</div>
-              <div class="description">+39 02.45496418</div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-              <img src="../assets/persons/Building.jpg" class="image">
-          </div>
+  <div class="panel-container mt-4">
+    <div class="row">
+      <div class="col-6">
+        <div class="headquarter-text">
+          <div class="title">Headquarter</div>
+          <div class="description">Via Aurelio Saffi 29 – 20123 Milano</div>
+          <div class="description">+39 02.45496412</div>
+          <div class="description">+39 02.45496418</div>
         </div>
+      </div>
+      <div class="col-6">
+        <img src="../assets/persons/Building.jpg" class="image" alt="Image of the entrance to the company building">
       </div>
     </div>
   </div>
@@ -55,7 +50,7 @@
 
 <style scoped>
 .a {
-  color-scheme: darkblue;
+  color: rgb(70, 107, 145);
   background-color: transparent;
   text-decoration: none;
 }
@@ -77,14 +72,15 @@
 }
 
 .image {
-  margin-left: 60%;
   margin-bottom: 5%;
   max-width: 800px;
-  max-height: 500px;
+  width: 100%;
+  height: auto;
 }
 
-.headquarter-text{
-  margin-left: 50%;
-  margin-top: 30%;
+.headquarter-text {
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 5%;
 }
 </style>
