@@ -16,7 +16,7 @@
         <div class="row logorow">
             <div class="col-12">
                 <NuxtLink to="/">
-                    <img src="../assets/GloriousKoalasLogoBW.png" alt="Logo of gloriousKoala, with a stylized Koala, and the motto 'We believe in you, we invest in you'" class="image">
+                    <img src="../assets/GloriousKoalasLogoBW.png" class="image" alt="Logo of Glorious Koalas, with a stylized Koala, and the motto 'We believe in you, we invest in you'">
                 </NuxtLink>
             </div>
         </div>
@@ -34,6 +34,7 @@
     .landmarksrow{
         position: absolute;
         width: 100%;
+        margin-top: 4%;
     }
     .logorow{
         
