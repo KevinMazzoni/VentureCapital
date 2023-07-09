@@ -34,7 +34,7 @@
                             }"
                             >
                             
-                                <AreaCard :name="project.name" :image="project.url"/>
+                                <SupervisedProjectsCard :name="project.name" :image="project.url"/>
                             </NuxtLink>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-import AreaCard from '~/components/cards/AreaCard.vue';
+import SupervisedProjectsCard from '~/components/cards/SupervisedProjectsCard.vue';
 
     const route = useRoute()
 
