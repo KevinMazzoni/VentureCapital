@@ -4,13 +4,13 @@
             <div class="col-12 title">
                 The team
             </div>
-            <div class="description">
+            <div class="caption subcaption">
                 A set orthogonal and winning skills.  
             </div>
         </div>
         <div class="row cardsrow">
         
-            <div v-for="card of persons" class="col-6">
+            <div v-for="card of persons" class="col-4 minwidth">
                 <NuxtLink :to="{
                   path: '/person',
                   query: {id:card.id, name: card.name, url:card.url, role:card.role, description:card.description}
@@ -42,13 +42,22 @@
         color: black;
     }
     .container{
-        margin-top: 4%;
+        margin-top: 2%;
     }
     .col-12{
         text-align: center;
     }
     .cardsrow{
-        margin-top: 4%;
+        margin-top: 2%;
         justify-content: center;
+    }
+    .subcaption{
+        text-align: center;
+        margin-top: 1%;
+    }
+    .minwidth{
+        margin-top: 2%;
+        margin-bottom: 3%;
+        min-width: 300px;
     }
 </style>
