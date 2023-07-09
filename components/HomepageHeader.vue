@@ -34,7 +34,6 @@
     .landmarksrow{
         position: absolute;
         width: 100%;
-        margin-top: 4%;
     }
     .logorow{
         
