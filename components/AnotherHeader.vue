@@ -10,7 +10,6 @@
                 </div>
                 <div class="col-9">
                     <nav class="nav">
-                        <NuxtLink to="/" class="landmark">Home</NuxtLink>
                         <NuxtLink to="/allProjects" class="landmark">All Projects</NuxtLink>
                         <NuxtLink to="/allAreas" class="landmark">All Areas</NuxtLink>
                         <NuxtLink to="/aboutUs" class="landmark">About us</NuxtLink>
@@ -30,8 +29,8 @@
     }
     .image{
         width: 100%;
-        height: 100%;
-        padding-left: 30px;
+        min-width: 200px;
+        height: auto;
         padding-top: 4px;
     }
     .logo{
