@@ -43,21 +43,21 @@
       color: String
     });
   
-    const redirectToProjectsByArea = () => {
-      // Qui puoi definire la logica per il reindirizzamento alla pagina "projectsByArea"
-      // Utilizza il router di Nuxt per navigare alla pagina con i parametri necessari
-      // Esempio:
-      const query = {
-        areaId: props.areaId,
-        name: props.name,
-        image: props.image,
-        description: props.description,
-        text: props.text,
-        color: props.color
-      };
-      const path = '/aboutUs';
-      this.$router.push({ path, query });
-    };
+    // const redirectToProjectsByArea = () => {
+    //   // Qui puoi definire la logica per il reindirizzamento alla pagina "projectsByArea"
+    //   // Utilizza il router di Nuxt per navigare alla pagina con i parametri necessari
+    //   // Esempio:
+    //   const query = {
+    //     areaId: props.areaId,
+    //     name: props.name,
+    //     image: props.image,
+    //     description: props.description,
+    //     text: props.text,
+    //     color: props.color
+    //   };
+    //   const path = '/aboutUs';
+    //   this.$router.push({ path, query });
+    // };
   </script>
   
 

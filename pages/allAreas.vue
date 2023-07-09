@@ -26,16 +26,16 @@
 </template>
 
 <script setup>
-import AreaCard from '~/components/cards/AreaCard.vue'
-import useAssets from "~/composables/useAssets.js"
+    import AreaCard from '~/components/cards/AreaCard.vue'
+    import useAssets from "~/composables/useAssets.js"
 
-let areas = [];
+    let areas = [];
 
-const data = await useFetch('/api/areas')
-for (let area of data.data.value) {
-    area.image = useAssets(`/assets/areas/${area.image}`)
-    areas.push(area)
-}
+    const data = await useFetch('/api/areas')
+    for (let area of data.data.value) {
+        area.image = useAssets(`/assets/areas/${area.image}`)
+        areas.push(area)
+    }
 </script>
 
 <style scoped>
