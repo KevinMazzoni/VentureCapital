@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="row cardsrow">
-            <div v-for="project of projects" class="col-6 minwidth">
+            <div v-for="(project, index) of projects" class="col-6 minwidth">
                 <!-- {{ card.name }} {{ card.url }} {{ card.caption }} -->
                 <NuxtLink :to="{
                   path: '/project',
