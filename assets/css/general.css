@@ -2,11 +2,13 @@
     font-family: "NewStyle";
     src: local("NewStyle"),
          url(~/assets/fonts/NewStyle.otf) format("truetype");
+    font-display: "swapt";
 }
 @font-face {
     font-family: "TT-Travels";
     src: local("TT-Travels"),
          url(~/assets/fonts/TT-Travels.otf) format("truetype");
+    font-display: "swapt";
 }
 
 html,body{

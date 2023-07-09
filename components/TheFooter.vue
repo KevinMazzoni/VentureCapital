@@ -15,7 +15,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <!-- @All rights reserved -->
-                                <img src="~/assets/copyright.png" class="copyright-image"> 
+                                <img src="~/assets/copyright.png" alt="Contains the tesxt 'copyright-All rights reserved'" class="copyright-image"> 
                             </div>
                         </div>
                     </div>

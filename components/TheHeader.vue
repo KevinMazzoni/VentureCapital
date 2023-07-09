@@ -5,7 +5,7 @@
             <div class="row headerrow">
                 <div class="col-3">
                     <NuxtLink to="/">
-                        <img src="../assets/GloriousKoalasLogoBW.png" class="image">
+                        <img src="../assets/GloriousKoalasLogoBW.png" alt="Logo of gloriousKoala, with a stylized Koala, and the motto 'We believe in you, we invest in you'" class="image">
                     </NuxtLink>
                 </div>
                 <div class="col-9">

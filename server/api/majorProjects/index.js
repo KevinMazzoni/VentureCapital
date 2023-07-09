@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
 
     const client = serverSupabaseClient(event)
 
-    const { data, error } = await client.from('projects').select("id, name, url, caption, text").eq("is_major", true)
+    const { data, error } = await client.from('projects').select("id, name, url, caption, text, SupervisedBy").eq("is_major", true)
 
     if(error){
         throw createError({statusCode: 400, statusMessage: error.message})
