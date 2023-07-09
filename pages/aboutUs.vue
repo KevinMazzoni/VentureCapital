@@ -42,7 +42,7 @@
     margin-left: 10%;
     font-size: xx-large;
     width: 80%;
-    height: 50px;
+    height: 10%;
     background-color:  rgb(70, 107, 145);
     color: white;
 }
