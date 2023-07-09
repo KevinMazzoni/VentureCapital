@@ -10,7 +10,6 @@
                 </div>
                 <div class="col-9">
                     <nav class="nav">
-                        <NuxtLink to="/" class="landmark">Home</NuxtLink>
                         <NuxtLink to="/allProjects" class="landmark">All Projects</NuxtLink>
                         <NuxtLink to="/allAreas" class="landmark">All Areas</NuxtLink>
                         <NuxtLink to="/aboutUs" class="landmark">About us</NuxtLink>
