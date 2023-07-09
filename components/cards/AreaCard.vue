@@ -2,7 +2,7 @@
     <div class="container outer-container">
       <div class="row">
         <div class="col-12 cont fill">
-            <img :src="image" alt="Image with the colour associated to the area" class="background-image">
+            <img :src="getImageUrl(image)" alt="Image with the colour associated to the area" class="background-image">
             <NuxtLink :to="{
                   path: '/area',
                   query: { areaId: areaId, name: name, image: image, description: description, text: text, color: color }
@@ -34,14 +34,23 @@
   </template>
   
   <script setup>
+
     const props = defineProps({
-      areaId: String,
-      name: String,
-      image: String,
-      description: String,
-      text: String,
-      color: String
+        areaId: String,
+        name: String,
+        image: String,
+        description: String,
+        text: String,
+        color: String
     });
+
+    // Funzione per ottenere l'URL completo dell'immagine
+    const getImageUrl = (image) => {
+        const baseUrl = process.env.BASE_URL || ''; // Assicurati di avere l'URL di base corretto qui
+        return `${baseUrl}${image}`;
+    };
+
+    // project.url = useAssets(`/assets/projects/${project.url}`)
   
     // const redirectToProjectsByArea = () => {
     //   // Qui puoi definire la logica per il reindirizzamento alla pagina "projectsByArea"
