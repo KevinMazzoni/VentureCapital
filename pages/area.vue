@@ -117,9 +117,10 @@ export default {
     color: v-bind(color);
 }
 
-.img {
+img {
     alt: v-bind(color);
-    width: "100%";
-    height: "600";
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
 }
 </style>
