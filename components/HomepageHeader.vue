@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="row landmarksrow">
+        <div class="row landmarksrow minwidth">
             <div class="col-12">
                 <!-- <nav class="nav">
                     <NuxtLink to="/" class="landmark">Home</NuxtLink>
@@ -13,7 +13,7 @@
                 <AnotherHeader/>
             </div>
         </div>
-        <div class="row logorow">
+        <div class="row logorow minwidth">
             <div class="col-12">
                 <NuxtLink to="/">
                     <img src="../assets/GloriousKoalasLogoBW.png" class="image" alt="Logo of Glorious Koalas, with a stylized Koala, and the motto 'We believe in you, we invest in you'">
@@ -82,5 +82,9 @@
     .landmark:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+
+    .minwidth{
+        min-width: 200px;
     }
 </style>
