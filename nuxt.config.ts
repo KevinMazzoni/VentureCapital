@@ -2,11 +2,28 @@ import { NuxtConfig } from '@nuxt/types';
 
 
 const nuxtConfig: NuxtConfig = {
-    // Altre configurazioni...
-
+  app:{
     head: {
-        titleTemplate: '%s - Nome del Tuo Progetto',
-    },
+        htmlAttrs: {
+          lang: 'en'
+        },
+        title: 'Glorious Koalas website page',
+        meta: [
+          {
+            name:"decription",
+            content:"descprition of the Glorious Koalas webpage"
+          },
+          {
+            name:"keywords",
+            content:"venture, capital, investment, innovation, startup"
+          },
+          {
+            name:"viewport",
+            content:"width=device-width, initial-scale=1"
+          }
+        ]
+    }
+  },
 
     css: [
       'bootstrap/dist/css/bootstrap.css',
@@ -16,7 +33,6 @@ const nuxtConfig: NuxtConfig = {
     modules: [
       '@nuxtjs/supabase'
     ],
-
     //ssr: false
 
     // serverHandlers: [
@@ -26,7 +42,6 @@ const nuxtConfig: NuxtConfig = {
     //     middleware: true
     //   }
     // ]
-
-  };
+};
   
 export default nuxtConfig;
