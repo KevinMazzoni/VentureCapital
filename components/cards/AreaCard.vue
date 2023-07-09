@@ -97,7 +97,7 @@
         color: white;
         padding: 0px;
         transition: all 200ms ease-in-out;
-        z-index: -1; 
+        /* z-index: 1;  */
     }
     img{
         border-radius: 10px;
@@ -139,7 +139,6 @@
     }
     .related-projects:hover{
         text-decoration: underline;
-        text-decoration: overline;
     }
     .link{
         color: white;
