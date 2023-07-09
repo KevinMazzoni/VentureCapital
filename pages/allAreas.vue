@@ -17,9 +17,9 @@
                   query: { areaId: area.id, name: area.name, image:area.image, description: area.description, text: area.text, color: area.color }
                 }" 
                 class="link"
-                >
-                    <AreaCard :name="area.name" :image="area.image"/>
-                </NuxtLink>
+                > -->
+                    <AreaCard :areaId="area.id" :name="area.name" :image="area.image" :description="area.description" :text="area.text" :color="area.color"/>
+                <!-- </NuxtLink> -->
             </div>
         </div>
     </div>
