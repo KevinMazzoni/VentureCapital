@@ -39,7 +39,7 @@
             id: supervisor.id, name: supervisor.name, url: imageUrl, role: supervisor.role, description: supervisor.description, comeFrom: 'null'
           }
         }" class="crumbs-link" v-if="comeFrom == 'person'">
-          {{ provenanceBC }}
+          {{ supervisor.name }}
         </NuxtLink>
 
         > {{ projectName }} project
