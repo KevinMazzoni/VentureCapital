@@ -11,17 +11,15 @@
                 <NuxtLink :to="{
                     path: '/AllAreas'
                 }" class="crumbs-link" v-if="comeFrom == 'allareas'">
-                    {{ provenanceBC }} > 
+                    {{ provenanceBC }} >
                 </NuxtLink>
 
-                <!-- Go to area -->
                 <NuxtLink :to="{
                     path: '/area',
-                    //areaId: areaId, name: name, image: image, description: description, text: text, color: color, comeFrom:'area'
                     query: { areaId: route.query.areaId, name: route.query.name, image: route.query.image, description: route.query.description, text: route.query.text, color: route.query.color }
 
                 }" class="crumbs-link" v-if="comeFrom == 'area'">
-                    {{ provenanceBC }}  >
+                    {{ provenanceBC }} >
                 </NuxtLink>
                 {{ route.query.name }} Area projects
             </span>
@@ -41,7 +39,6 @@
         </div>
         <div class="row cardsrow">
             <div v-for="project of projects" class="col-6 minwidth">
-                <!-- {{ card.name }} {{ card.url }} {{ card.caption }} -->
                 <NuxtLink :to="{
                     path: '/project',
                     query: { name: project.name, text: project.text, url: project.url, supervisedBy: project.SupervisedBy, comeFrom: 'projectbyarea', areaId: route.query.areaId, areaName: route.query.name, areaImage: route.query.image, areaDescription: route.query.description, areaText: route.query.text, areaColor: route.query.color }

@@ -12,19 +12,6 @@
     font-display: "swapt";
 }
 
-html,
-body {
-    /* height: 100%; */
-}
-
-body {
-    /* display: flex;
-    flex-direction: column; */
-    /* background-color: lightblue; */
-    /* background-color: blue;
-    margin: 175px; */
-}
-
 .description {
     font-size: 20px;
     font-family: "century-gothic, sans-serif";
@@ -54,7 +41,3 @@ body {
 .crumbs-link {
     color: white;
 }
-
-.link-to-all {}
-
-.button {}

@@ -23,10 +23,6 @@ const nuxtConfig: NuxtConfig = {
         }
       ]
     },
-
-    router: {
-      routes: require('./routes.js').default,
-    },
   },
 
   css: [
@@ -37,15 +33,7 @@ const nuxtConfig: NuxtConfig = {
   modules: [
     '@nuxtjs/supabase'
   ],
-  //ssr: false
 
-  // serverHandlers: [
-  //   {
-  //     route: '/server',
-  //     handler: '~/server/myServer/index.js',
-  //     middleware: true
-  //   }
-  // ]
 };
 
 export default nuxtConfig;

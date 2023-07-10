@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 text-col">
+            <div class="col-12 description mb-4">
                 {{ text }}
             </div>
         </div>
@@ -108,7 +108,6 @@ export default {
     text-align: center;
     font-size: xx-large;
     margin-top: 5%;
-    margin-bottom: 5%;
 }
 
 .text-col {

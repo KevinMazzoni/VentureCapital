@@ -4,7 +4,6 @@
   </div>
   <div class="video-container">
     <video playsinline autoplay muted loop poster="~/assets/background-image.jpg">
-      <!-- <source src="~/assets/NewYork.mp4" type="video/mp4" /> -->
         Your browser does not support the video tag.
     </video>
   </div>
@@ -17,11 +16,8 @@
       title: 'Il mio titolo di pagina'
     };
   },
-  // ...il resto del componente della pagina
+
 }
-  // definePageMeta({
-  //   layout: "homepage"
-  // })
 </script>
 
 <style scoped>

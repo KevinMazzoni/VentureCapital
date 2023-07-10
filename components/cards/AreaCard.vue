@@ -27,9 +27,6 @@
 
         </div>
       </div>
-      <!-- <div class="row"> -->
-        
-      <!-- </div> -->
     </div>
   </template>
   
@@ -44,9 +41,6 @@
     });
   
     const redirectToProjectsByArea = () => {
-      // Qui puoi definire la logica per il reindirizzamento alla pagina "projectsByArea"
-      // Utilizza il router di Nuxt per navigare alla pagina con i parametri necessari
-      // Esempio:
       const query = {
         areaId: props.areaId,
         name: props.name,
