@@ -7,6 +7,12 @@
                 }" class="crumbs-link">
                     Home
                 </NuxtLink>
+                > 
+                <NuxtLink :to="{
+                    path: '/AllAreas'
+                }" class="crumbs-link">
+                    All Areas
+                </NuxtLink> 
                 > {{ name }}
             </span>
         </div>
@@ -49,22 +55,22 @@
 export default {
     computed: {
         name(): any {
-            return this.$route.query.name || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.name;
         },
         image(): any {
-            return this.$route.query.image || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.image;
         },
         description(): any {
-            return this.$route.query.description || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.description;
         },
         text(): any {
-            return this.$route.query.text || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.text;
         },
         color(): any {
-            return this.$route.query.color || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.color;
         },
         areaId(): any {
-            return this.$route.query.areaId || "Valore predefinito se il parametro non è presente";
+            return this.$route.query.areaId;
         }
     },
     mounted() {
