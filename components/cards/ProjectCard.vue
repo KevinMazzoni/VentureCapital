@@ -11,7 +11,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-4" :style="{'font-family': 'century-gothic, sans-serif', 'text-align': 'left'}">
                 {{ caption }}
             </div>
         </div>
@@ -19,13 +19,11 @@
 </template>
 
 <script setup>
-    //import useAssets from "~/composables/useAssets.js" 
     const props = defineProps({
         name: String,
         url: String,
         caption: String
     })
-    //const imageUrl = useAssets(`/assets/projects/${props.url}`)
 </script>
 
 <style scoped>
@@ -73,13 +71,11 @@
     }
     
     .title{
-        /* Center positioning */
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 
-        /* Font */
         font-family: monospace;
         font-size: xxx-large;
     }

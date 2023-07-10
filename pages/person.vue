@@ -14,12 +14,11 @@
                     {{ provenanceBC }} >
                 </NuxtLink>
 
-                <!-- Go to projects -->
                 <NuxtLink :to="{
                     path: '/project', 
                     query: { name: previousPeName, text: previousPetxt, url: previousPeurl, supervisedBy: id, index: index, dimArrayProjects: projects.length, comeFrom:'person'}
                 }" class="crumbs-link" v-if="comeFrom == 'project'">
-                    {{ provenanceBC }} >
+                    {{ previousPeName }} Project >
                 </NuxtLink>
                 {{ name }}
             </span>

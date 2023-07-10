@@ -52,14 +52,14 @@
       {{ projectName }}
     </div>
     <div>
-      <p class="margin">
+      <p class="margin description">
         {{ paragraphs[0] }}
       </p>
     </div>
     <div class="col-6 title mt-4">
       Our investment drivers
     </div>
-    <p class="margin">
+    <p class="margin description">
       {{ paragraphs[1] }}
     </p>
     <div class="title col-6">Supervisor:
@@ -130,7 +130,6 @@ const route = useRoute();
 const projectName = route.query.name;
 const projectText = route.query.text;
 const projectUrl = route.query.url;
-const idSupervisor = route.query.supervisedBy;
 const areaId = route.query.areaId;
 const areaName = route.query.areaName;
 const areaImage = route.query.areaImage;
@@ -138,11 +137,8 @@ const areaDescription = route.query.areaDescription;
 const areaText = route.query.areaText;
 const areaColor = route.query.areaColor;
 
-const personId = route.query.personId;
 const personName = route.query.personName;
-const personUrl = route.query.personUrl;
-const personRole = route.query.personRole;
-const personDescription = route.query.personDescription;
+
 
 let index = route.query.index;
 const comeFrom = route.query.comeFrom;
@@ -151,12 +147,9 @@ const data = await useFetch('/api/supervisor', { params: { id: route.query.super
 const supervisor = data.data._value[0]
 const imageUrl = useAssets(`/assets/persons/${supervisor.url}`)
 
-//Magheggio
-
 const goBack = () => {
   console.log("Route back: ", route.back());
 };
-// console.log(projects[++index])
 
 let projects = [];
 

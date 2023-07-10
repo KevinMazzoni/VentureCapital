@@ -17,7 +17,7 @@
                 The team
             </div>
             <div class="caption subcaption">
-                A set orthogonal and winning skills.
+                A set of orthogonal and winning skills.
             </div>
         </div>
         <div class="row cardsrow">
