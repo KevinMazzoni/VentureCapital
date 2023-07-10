@@ -6,7 +6,3 @@
     </div>
     <TheFooter />
 </template>
-
-<script setup>
-import Breadcrumbs from '../components/Breadcrumbs.vue';
-</script>
