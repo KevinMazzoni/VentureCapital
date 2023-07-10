@@ -2,7 +2,7 @@
     <div class="container outer-container">
       <div class="row">
         <div class="col-12 cont fill">
-            <img :src="getImageUrl(image)" alt="Image with the colour associated to the area" class="background-image">
+            <img :src="image" alt="Image with the colour associated to the area" class="background-image">
             <NuxtLink :to="{
                   path: '/area',
                   query: { areaId: areaId, name: name, image: image, description: description, text: text, color: color }
@@ -20,7 +20,7 @@
                 }"
                 class="link"
             >
-            <div class="related-projects">
+            <div class="related-projects caption">
                 Related projects
             </div>
         </NuxtLink>
@@ -34,39 +34,30 @@
   </template>
   
   <script setup>
-
     const props = defineProps({
-        areaId: String,
-        name: String,
-        image: String,
-        description: String,
-        text: String,
-        color: String
+      areaId: Number,
+      name: String,
+      image: String,
+      description: String,
+      text: String,
+      color: String
     });
-
-    // Funzione per ottenere l'URL completo dell'immagine
-    const getImageUrl = (image) => {
-        const baseUrl = process.env.BASE_URL || ''; // Assicurati di avere l'URL di base corretto qui
-        return `${baseUrl}${image}`;
-    };
-
-    // project.url = useAssets(`/assets/projects/${project.url}`)
   
-    // const redirectToProjectsByArea = () => {
-    //   // Qui puoi definire la logica per il reindirizzamento alla pagina "projectsByArea"
-    //   // Utilizza il router di Nuxt per navigare alla pagina con i parametri necessari
-    //   // Esempio:
-    //   const query = {
-    //     areaId: props.areaId,
-    //     name: props.name,
-    //     image: props.image,
-    //     description: props.description,
-    //     text: props.text,
-    //     color: props.color
-    //   };
-    //   const path = '/aboutUs';
-    //   this.$router.push({ path, query });
-    // };
+    const redirectToProjectsByArea = () => {
+      // Qui puoi definire la logica per il reindirizzamento alla pagina "projectsByArea"
+      // Utilizza il router di Nuxt per navigare alla pagina con i parametri necessari
+      // Esempio:
+      const query = {
+        areaId: props.areaId,
+        name: props.name,
+        image: props.image,
+        description: props.description,
+        text: props.text,
+        color: props.color
+      };
+      const path = '/aboutUs';
+      this.$router.push({ path, query });
+    };
   </script>
   
 
@@ -106,7 +97,7 @@
         color: white;
         padding: 0px;
         transition: all 200ms ease-in-out;
-        /* z-index: -1; */
+        /* z-index: 1;  */
     }
     img{
         border-radius: 10px;
@@ -136,11 +127,18 @@
         transform: translate(-50%, -50%);
 
         /* Font */
-        font-family: monospace;
-        font-size: x-large;
+        font-size: 20px;
+        color: white;
+        background-color: v-bind(color);
+        font-weight:bold;
 
-        z-index: 10000;
+        border-radius: 10px;
         opacity: 0;
+        padding-left: 5px;
+        padding-right: 5px
+    }
+    .related-projects:hover{
+        text-decoration: underline;
     }
     .link{
         color: white;

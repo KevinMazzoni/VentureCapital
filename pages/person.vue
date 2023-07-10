@@ -30,7 +30,7 @@
                         <div v-for="project of projects" class="col-3 minwidth" >
                             <NuxtLink :to="{
                                 path: '/project',
-                                query: { name: project.name, text: project.text, url:project.url, supervisedBy:id}
+                                query: { name: project.name, text: project.text, url:project.url, supervisedBy:id, comeFrom: 'person', personId:route.query.id, personName: route.query.name, personUrl: route.query.url, personRole: route.query.role, personDescription: route.query.description}
                             }"
                             >
                             

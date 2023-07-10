@@ -15,7 +15,7 @@
                 <!-- {{ card.name }} {{ card.url }} {{ card.caption }} -->
                 <NuxtLink :to="{
                   path: '/project',
-                  query: { name: project.name, text: project.text, url:project.url, supervisedBy:project.SupervisedBy}
+                  query: { name: project.name, text: project.text, url:project.url, supervisedBy:project.SupervisedBy, comeFrom: 'majorprojects'}
                 }"
                 class="link"
                 >

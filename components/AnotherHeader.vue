@@ -3,12 +3,12 @@
     <header>
         <div class="container">
             <div class="row headerrow">
-                <div class="col-3">
+                <div class="col-3 minwidth">
                     <NuxtLink to="/">
                         <img src="../assets/GloriousKoalasLogoBW.png" class="image" alt="Logo of Glorious Koalas, with a stylized Koala, and the motto 'We believe in you, we invest in you'">
                     </NuxtLink>
                 </div>
-                <div class="col-9">
+                <div class="col-9 minwidth">
                     <nav class="nav">
                         <NuxtLink to="/allProjects" class="landmark">All Projects</NuxtLink>
                         <NuxtLink to="/allAreas" class="landmark">All Areas</NuxtLink>
@@ -91,5 +91,9 @@
     .landmark:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+
+    .minwidth{
+        min-width: 200px;
     }
 </style>
