@@ -36,7 +36,7 @@
     </div> -->
     <hr>
     <div class="row buttonsrow">
-      <div class="col-4">
+      <div class="col-6">
         
         <!-- Go to all projects -->
         <NuxtLink :to="{ 
@@ -45,7 +45,7 @@
           class="link"
           v-if="comeFrom=='allprojects'">
           <button type="button" class="button-class caption" @click="goBack()">
-            Go to {{ provenance }}
+            Back to {{ provenance }}
           </button>
         </NuxtLink>
 
@@ -56,10 +56,11 @@
           class="link"
           v-if="comeFrom=='majorprojects'">
           <button type="button" class="button-class caption" @click="goBack()">
-            Go to {{ provenance }}
+            Back to {{ provenance }}
           </button>
         </NuxtLink>
 
+        <!-- Go to projects by area -->
         <NuxtLink :to="{
             path: '/projectByArea',
             query: { areaId: areaId, name: areaName, image: areaImage, description: areaDescription, text: areaText, color: areaColor }
@@ -67,33 +68,22 @@
           class="link"
           v-if="comeFrom=='projectbyarea'">
           <button type="button" class="button-class caption" @click="goBack()">
-            Go to {{ provenance }}
+            Back to {{ areaName }} area projects
           </button>
         </NuxtLink>
 
-        <!-- <NuxtLink :to="{
+        <!-- Go to person -->
+        <NuxtLink :to="{
             path: '/person',
-            query: { areaId: areaId, name: areaName, image: areaImage, description: areaDescription, text: areaText, color: areaColor }
+            query: { id: personId, name: personName, url: personUrl, role: personRole, description: personDescription }
           }"
           class="link"
-          v-if="comeFrom=='projectbyarea'">
+          v-if="comeFrom=='person'">
           <button type="button" class="button-class caption" @click="goBack()">
-            Go to {{ provenance }}
+            Back to {{ personName }}
           </button>
-        </NuxtLink> -->
+        </NuxtLink>
 
-        <!-- Coming from project by area-->
-        <!-- <NuxtLink :to="{
-                    path: '/projectByArea',
-                    query: { areaId: areaId, name: areaName, image: areaImage, description: areaDescription, text: areaText, color: areaColor }
-                  }"
-                  class="link"
-                  v-if="comeFrom=='projectbyarea'"
-        >
-          <button type="button" class="button-class caption">
-            Back to {{ provenance }}
-          </button>
-        </NuxtLink> -->
       </div>
     </div>
   </div>
@@ -113,15 +103,12 @@
   const areaText = route.query.areaText;
   const areaColor = route.query.areaColor;
 
+  const personId = route.query.personId;
+  const personName = route.query.personName;
+  const personUrl = route.query.personUrl;
+  const personRole = route.query.personRole;
+  const personDescription = route.query.personDescription;
 
-  const props = defineProps({
-      areaId: String,
-      areaName: String,
-      areaImage: String,
-      areaDescription: String,
-      areaText: String,
-      areaColor: String
-  });
 
   //Prove per next e previous project
   let index = route.query.index;
@@ -154,27 +141,28 @@
 
   switch(comeFrom){
     case 'allprojects':
-      console.log("COME FROM ALL PROJECTS");
+      
       // const projectsData = await useFetch('/api/projects');
       // for (let project of projectsData.data.value){
       //   projects.push(project);
       // }
       // console.log("Prossimo progetto: ", projects[++index] );
+      
       provenance = "all projects"
       break;
     case 'projectbyarea':
-      //TODO
-      console.log("COME FROM PROJECTSBYAREA");
+      
+      
       provenance = "projects by area";
       break;
     case 'majorprojects':
-      //TODO
-      console.log("COME FROM MAJORPROJECTS")
+      
+      
       provenance = "major projects"
       break;
     case 'person':
-      //TODO
-      console.log("COME FROM PERSON")
+      
+      
       provenance = "person"
       break;
     default:
