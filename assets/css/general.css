@@ -1,49 +1,60 @@
 @font-face {
     font-family: "NewStyle";
     src: local("NewStyle"),
-         url(~/assets/fonts/NewStyle.otf) format("truetype");
+        url(~/assets/fonts/NewStyle.otf) format("truetype");
     font-display: "swapt";
 }
+
 @font-face {
     font-family: "TT-Travels";
     src: local("TT-Travels"),
-         url(~/assets/fonts/TT-Travels.otf) format("truetype");
+        url(~/assets/fonts/TT-Travels.otf) format("truetype");
     font-display: "swapt";
 }
 
-html,body{
+html,
+body {
     /* height: 100%; */
 }
 
-body{
+body {
     /* display: flex;
     flex-direction: column; */
     /* background-color: lightblue; */
     /* background-color: blue;
     margin: 175px; */
 }
-.description{
+
+.description {
     font-size: 20px;
     font-family: "century-gothic, sans-serif";
     margin-top: 3%;
 }
 
 
-.title{
+.title {
     font-size: xx-large;
     /*font-family: 'NewStyle', sans-serif;*/
 }
 
-.caption{
+.caption {
     font-size: large;
     font-family: 'TT-Travels', sans-serif;
 }
 
-
-.link-to-all{
-
+.crumbs {
+    background-color: rgb(70, 107, 145);
+    color: white;
 }
 
-.button{
-
+.crumbs-text {
+    margin-left: 5%;
 }
+
+.crumbs-link {
+    color: white;
+}
+
+.link-to-all {}
+
+.button {}

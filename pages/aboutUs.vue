@@ -1,4 +1,16 @@
 <template>
+    <div class="row mt-2 mb-2">
+        <div class="crumbs">
+            <span class="crumbs-text">
+                <NuxtLink :to="{
+                    path: '/'
+                }" class="crumbs-link">
+                    Home
+                </NuxtLink>
+                > About us
+            </span>
+        </div>
+    </div>
     <div class="row mt-4">
         <div class="container-motto text-center mt-4">
             "{{ data.motto }}"
