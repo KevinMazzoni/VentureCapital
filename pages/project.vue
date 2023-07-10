@@ -39,11 +39,48 @@
       <div class="col-4">
         
         <!-- Go to all projects -->
-        <NuxtLink :to="{ path: '/allProjects' }" class="link">
+        <NuxtLink :to="{ 
+            path: '/allProjects' 
+          }" 
+          class="link"
+          v-if="comeFrom=='allprojects'">
           <button type="button" class="button-class caption" @click="goBack()">
-            Go to all projects
+            Go to {{ provenance }}
           </button>
         </NuxtLink>
+
+        <!-- Go to major projects -->
+        <NuxtLink :to="{ 
+            path: '/majorProjects' 
+          }" 
+          class="link"
+          v-if="comeFrom=='majorprojects'">
+          <button type="button" class="button-class caption" @click="goBack()">
+            Go to {{ provenance }}
+          </button>
+        </NuxtLink>
+
+        <NuxtLink :to="{
+            path: '/projectByArea',
+            query: { areaId: areaId, name: areaName, image: areaImage, description: areaDescription, text: areaText, color: areaColor }
+          }"
+          class="link"
+          v-if="comeFrom=='projectbyarea'">
+          <button type="button" class="button-class caption" @click="goBack()">
+            Go to {{ provenance }}
+          </button>
+        </NuxtLink>
+
+        <!-- <NuxtLink :to="{
+            path: '/person',
+            query: { areaId: areaId, name: areaName, image: areaImage, description: areaDescription, text: areaText, color: areaColor }
+          }"
+          class="link"
+          v-if="comeFrom=='projectbyarea'">
+          <button type="button" class="button-class caption" @click="goBack()">
+            Go to {{ provenance }}
+          </button>
+        </NuxtLink> -->
 
         <!-- Coming from project by area-->
         <!-- <NuxtLink :to="{
@@ -64,9 +101,18 @@
 
 <script setup>
   const route = useRoute();
+
   const projectName = route.query.name;
   const projectText = route.query.text;
   const projectUrl = route.query.url;
+
+  const areaId = route.query.areaId;
+  const areaName = route.query.areaName;
+  const areaImage = route.query.areaImage;
+  const areaDescription = route.query.areaDescription;
+  const areaText = route.query.areaText;
+  const areaColor = route.query.areaColor;
+
 
   const props = defineProps({
       areaId: String,
@@ -77,7 +123,6 @@
       areaColor: String
   });
 
-  const areaId = route.query.areaId;
   //Prove per next e previous project
   let index = route.query.index;
   const dimArrayProjects = route.query.dimArrayProjects;

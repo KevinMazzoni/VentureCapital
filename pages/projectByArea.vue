@@ -15,7 +15,7 @@
                 <!-- {{ card.name }} {{ card.url }} {{ card.caption }} -->
                 <NuxtLink :to="{
                   path: '/project',
-                  query: { name: project.name, text: project.text, url:project.url, supervisedBy:project.SupervisedBy, comeFrom: 'projectbyarea', areaId: route.query.areaId, areaName: route.query.name, areaDescription: route.query.description, areaText: route.query.text, areaColor: route.query.color}
+                  query: { name: project.name, text: project.text, url:project.url, supervisedBy:project.SupervisedBy, comeFrom: 'projectbyarea', areaId: route.query.areaId, areaName: route.query.name, areaImage: route.query.image, areaDescription: route.query.description, areaText: route.query.text, areaColor: route.query.color}
                 }"
                 class="link"
                 >
