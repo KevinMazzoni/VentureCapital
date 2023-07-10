@@ -16,7 +16,7 @@
           
             <NuxtLink :to="{
                     path: '/projectByArea',
-                    query: { areaId: areaId, name: name, image: image, description: description, text: text, color: color }
+                    query: { areaId: areaId, name: name, image: image, description: description, text: text, color: color, comeFrom:'allareas' }
                 }"
                 class="link"
             >

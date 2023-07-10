@@ -1,6 +1,6 @@
 <template>
     <TheHeader />
-    <Breadcrumbs class="mt-2 mb-2"></Breadcrumbs>
+    
     <div class="slot">
         <slot />
     </div>

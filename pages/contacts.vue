@@ -1,4 +1,16 @@
 <template>
+  <div class="row mt-2 mb-2">
+        <div class="crumbs">
+            <span class="crumbs-text">
+                <NuxtLink :to="{
+                    path: '/'
+                }" class="crumbs-link">
+                    Home
+                </NuxtLink>
+                > Contact Us
+            </span>
+        </div>
+    </div>
   <div class="container mt-4">
     <div class="row mb-4">
       <div class="col-7 outer-container ">
