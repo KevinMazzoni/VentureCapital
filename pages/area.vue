@@ -1,4 +1,22 @@
 <template>
+        <div class="row mt-2 mb-2">
+        <div class="crumbs">
+            <span class="crumbs-text">
+                <NuxtLink :to="{
+                    path: '/'
+                }" class="crumbs-link">
+                    Home
+                </NuxtLink>
+                > 
+                <NuxtLink :to="{
+                    path: '/AllAreas'
+                }" class="crumbs-link">
+                    All Areas
+                </NuxtLink> 
+                > {{ name }}
+            </span>
+        </div>
+    </div>
     <div>
         <img :src="image" :alt="color" :style="{ width: '100%', height: '600px'}">
     </div>
@@ -23,7 +41,7 @@
             <div class="col-6 button-col">
                 <NuxtLink :to="{
                     path: '/projectByArea',
-                    query: { areaId: areaId, name: name, image: image, description: description, text: text, color: color }
+                    query: { areaId: areaId, name: name, image: image, description: description, text: text, color: color, comeFrom:'area' }
                 }">
                     <button type="button" class="button-class caption">{{ name }} projects</button>
                 </NuxtLink>
@@ -37,22 +55,22 @@
 export default {
     computed: {
         name(): any {
-            return this.$route.query.name || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.name;
         },
         image(): any {
-            return this.$route.query.image || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.image;
         },
         description(): any {
-            return this.$route.query.description || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.description;
         },
         text(): any {
-            return this.$route.query.text || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.text;
         },
         color(): any {
-            return this.$route.query.color || "Valore predefinito se il parametro name non è presente";
+            return this.$route.query.color;
         },
         areaId(): any {
-            return this.$route.query.areaId || "Valore predefinito se il parametro non è presente";
+            return this.$route.query.areaId;
         }
     },
     mounted() {
